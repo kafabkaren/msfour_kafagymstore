@@ -1,6 +1,101 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">It works!</h1>
+
+    <!-- Showcase Section -->
+    <section id="showcase">
+        <div class="showcase-overlay"></div>
+            <div class="container h-100">
+                <div class="row showcase h-100">
+                    <div class="col-7 col-md-6 my-auto">
+                    <h1 class="text-uppercase text-white font-weight-bold"><strong>Sport</strong><br><strong class="text-orange">Equipment</strong></h1>
+                    <h4 class="text-white">UP TO <strong class="text-orange">15% OFF</strong></h4>
+                        <div class="my-5">
+                            <h3>
+                                <a href="" class="see-products-btn btn-lg rounded-2 text-uppercase py-3">See Products</a>
+                            </h3> 
+                        </div>
+                    </div>
+                </div>
+            </div>        
+    </section>
+    <!-- /.showcase section -->
+
+    <!-- Categories Section --> 
+    <section id="categories">
+        <div class="container category-title">
+            <h2 class="title-orange text-center">Featured Categories</h2>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-cat h-100 border-0">
+                            <a>
+                               <img src="#" class="card-img-top img-fluid" alt="">
+                            </a>
+                            <a>
+                               <img src="#" class="card-img-top img-fluid" alt="">
+                            </a>
+                            <div class="card-body pb-0 text-center">
+                                <h5 class="card-title sm-heading"></h5>
+                            </div>                    
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </section>
+    <!-- /.categories section -->
+
+    <!-- Service Section -->
+    <section id="service">
+        <div class="container d-flex service-titles">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-sp-12">
+                    <div class="block">
+                        <div class="box text-center">
+                            <i class="service-icon fas fa-truck"></i>
+                            <div class="title text-center"><strong>Fast Shipping</strong> </div>
+                            <p>On orders over 500 SEK. This offer is valid on all our store items.</p>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-sp-12">
+                    <div class="block">
+                        <div class="box text-center">
+                            <i class="service-icon fas fa-shield-alt"></i>
+                            <div class="title text-center"><strong>Secure Payments</strong></div>
+                            <p>We ship to 21 regions in Sweden &amp; over 250 municipalities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-sp-12">
+                    <div class="block">
+                        <div class="box text-center">
+                            <i class="service-icon fas fa-address-book"></i>
+                            <div class="title text-center"><strong>Wide Range</strong></div>
+                            <p>These cases are perfectly simple and easy to distinguish.</p>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-sp-12">
+                    <div class="block">
+                        <div class="box text-center">
+                            <i class="service-icon fas fa-comment-dots"></i>
+                            <div class="title text-center"><strong>Online Guidance</strong></div>
+                            <p>Customer Support <br>Days a week from 9:00 am to 7:00 pm.</p>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.service section -->
+
 {% endblock %}
