@@ -37,11 +37,96 @@
   </head>
 
   <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid fixed-top">
+        <!-- Delivery banner -->
+        <div id="delivery-banner" class="row text-right">
+            <div class="col bg-orange text-white">
+                <p class="text-center my-0">Get Free Delivery on Orders over {{ free_delivery_threshold }} SEK!</p>
+            </div>
+        </div>
+        <!-- /Delivery banner -->
+
+        <!-- Header topnavigation -->
+        <div id="topnav" class="row topnav pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="logo nav-link main-logo-link"><img src="" class="my-0" alt="kafagym-store logo"></a>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black rounded-2" type="text" name="q" placeholder="Search our store...">
+                        <div class="input-group-append">
+                            <button class="form-control btn border border-orange btn-orange rounded-2" type="submit">
+                                <span class="icon btn-white">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item dropdown">
+                        <a class="dark-style nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-user fa-lg text-orange"></i></div>
+                                <p class="text-orange my-0">My Account</p>
+                            </div>
+                        </a>
+                    
+                        <div class="dropdown-menu border-2" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                               <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
+                               <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
+                            {% endif %}
+                        </div>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a class="{% if wishlist %}text-info font-weight-bold{% else %}dark-style{% endif %} nav-link" href="">
+                            <div class="text-center">
+                                <div><i class="fas fa-heart fa-lg text-orange"></i></div>
+                                    <p class="text-orange my-0">
+                                        {% if wishlist %}
+                                            {{ wishlist }}
+                                        {% else %}
+                                            0
+                                        {% endif %}
+                                    </p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}dark-style{% endif %} nav-link" href="">
+                            <div class="text-center text-orange">
+                                <div><i class="fas fa-shopping-cart fa-lg text-orange"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                            {{ grand_total|floatformat:2 }} SEK
+                                        {% else %}
+                                            0.00 SEK
+                                        {% endif %}
+                                    </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
 
     {% if messages %}
         <div class="message-container">
-
+            
         </div>    
     {% endif %}
 
