@@ -1,0 +1,181 @@
+ [
+	{
+		"pk": 1,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310221",
+			"name": "All In One 1",
+			"description": "Buy a 20kg dumbbell and get protein powder and shake bottle for free.",
+			"has_sizes": true,
+			"price": 1004.42,
+			"category": 5,
+			"rating": 4.5,
+			"image_url": "",
+			"image": "all_in_one_1.jpg"
+		}
+    },
+	
+	{
+		"pk": 2,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310222",
+			"name": "All In One 2",
+			"description": "An Inclusive special offer to you boost your summer energy with instensive training all in one place. Check out our 'Heart-shape Gym Package' for a friendly price ever offered!",
+			"has_sizes": true,
+			"price": 1500.99,
+			"category": 5,
+			"rating": 4.7,
+			"image_url": "",
+			"image": "all_in_one_2.jpg"
+		}
+    },
+	{
+		"pk": 3,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310223",
+			"name": "Bench Press",
+			"description": "It is a mass builder and pure strength builder that can produce tremendous results in a short period of time. The bench press is a great chest builder but also, a tremendous shoulders and triceps builder as secondary muscles.",
+			"has_sizes": true,
+			"price": 3549.99,
+			"category": 2,
+			"rating": 4.6,
+			"image_url": "",
+			"image": "bench_press.jpg"
+		}
+    },
+	{
+		"pk": 4,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310224",
+			"name": "Dumbbell",
+			"description": "Our dumbbell quality has always been highly rated. It is perfectl designed to be used in individually or in pairs. You can use one in each hand.",
+			"has_sizes": true,
+			"price": 842.00,
+			"category": 2,
+			"rating": 4.7,
+			"image_url": "",
+			"image": "dumbbell.jpg"
+		}
+    },
+	{
+		"pk": 5,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310225",
+			"name": "Hybrid Magnetic Elliptical Machine",
+			"description": "2-in-1 design combines a full body elliptical workout with the seated comfort of an upright bike 8 levels of resistance Pulse grips enable you to monitor your heart rate at all times Comfortable ergonomic 13” stride length.",
+			"has_sizes": true,
+			"price": 10999.99,
+			"category": 1,
+			"rating": 4.8,
+			"image_url": "",
+			"image": "hybrid_magnetic_elliptical_machine.jpg"
+		}
+    },
+	{
+		"pk": 6,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310226",
+			"name": "Jogging Outfit",
+			"description": "Our jogging outfit makes your running experience a lot funny and enjoyable.",
+			"has_sizes": true,
+			"price": 679.99,
+			"category": 4,
+			"rating": 4.5,
+			"image_url": "",
+			"image": "jogging_outfit.jpg"
+		}
+    },
+	{
+		"pk": 7,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310227",
+			"name": "Kettlebell",
+			"description": "Kettlebell will train your hips to produce force in both speed and strength.",
+			"has_sizes": true,
+			"price": 324.00,
+			"category": 2,
+			"rating": 4.7,
+			"image_url": "",
+			"image": "kettlebell.jpg"
+		}
+    },
+	{
+		"pk": 8,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310228",
+			"name": "Protein Powder",
+			"description": "Buy a set of pre, during and post workouts powder to strengthen and get muscles recover with ease.",
+			"has_sizes": true,
+			"price": 508.00,
+			"category": 6,
+			"rating": 4.5,
+			"image_url": "",
+			"image": "protein_powder.jpg"
+		}
+    },
+	{
+		"pk": 9,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310229",
+			"name": "Running Shoes",
+			"description": "Our latest version of an innovative running shoe are designed for high-mileage training and long races like half marathons and marathons..",
+			"has_sizes": true,
+			"price": 789.43,
+			"category": 3,
+			"rating": 4.7,
+			"image_url": "",
+			"image": "running_shoes.jpg"
+		}
+    },
+	{
+		"pk": 10,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310230",
+			"name": "Treadmill",
+			"description": "Improve fitness, burn calories and lose weight while improving your cardiovascular system. Using our treadmills, you be able to raise your heart rate, which helps strengthen your heart whilst improving your circulation.",
+			"has_sizes": true,
+			"price": 10988.00,
+			"category": 1,
+			"rating": 4.8,
+			"image_url": "",
+			"image": "treadmill.jpg"
+		}
+    },
+	{
+		"pk": 11,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310231",
+			"name": "Spin Bike",
+			"description": "Exercise Bike, CHAOKE Indoor Cycling Bike, Stationary Bike Magnetic Resistance Whisper Quiet for Home Cardio Workout Heavy Flywheel & Comfortable Seat Cushion with Digital Monitor",
+			"price": 3390.99,
+			"category": 1,
+			"rating": 4.7,
+			"image_url": "",
+			"image": "spin_bike"
+		}
+    },
+	{
+		"pk": 12,
+		"model": "products.product",
+		"fields": {
+			"sku": "pp5007310232",
+			"name": "StairMaster SM3 StepMill",
+			"description": "Smaller but just as tough as the commercial version sold into health clubs. Climbing stairs is one of the most efficient and effective cardio and strength workouts. Step range of 26 to 162 steps per minute. 10 total workout programs, including fat burner, calorie burner, intervals and more. Easy-to-read large backlit LCD display; Polar-compatible heart rate monitoring",
+			"price": 4495.00,
+			"category": 1,
+			"rating": 4.6,
+			"image_url": "",
+			"image": "stair_master"
+		}
+    }
+]
