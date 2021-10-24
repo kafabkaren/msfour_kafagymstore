@@ -182,6 +182,99 @@ body {
     background-color: #4B4D4F;
 }
 
+/* Footer */
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+ }
+
+.footer-container {
+    padding-top: 20px;
+    margin-top: auto;
+    background-color:#FAA61A;
+    color: #555;
+    overflow: hidden;
+    padding-left: 30px;
+    position: relative;
+}
+
+.footer-bottom {
+    background: #F7941E;
+    height: 40px;
+    padding: 5px;
+    bottom: 0px;
+    left: 0px;
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+.social-networks {
+    text-align: left;
+}
+
+.social-networks li {
+    display: inline;
+}
+
+.social-networks i {
+  font-size: 160%;
+  margin: 1%;
+  padding: 5%;
+  color: #FFF;
+}
+
+.social-networks .fa-facebook:hover {
+    color: #1677F2;
+}
+
+.social-networks .fa-twitter:hover {
+    color: #0F9AFC;
+}
+
+.social-networks .fa-youtube:hover {
+    color: #FF0000;
+}
+
+.social-networks .fa-instagram:hover {
+    color: #BA31AF;
+}
+
+.contact-us h6:before {
+    content: '|';
+    padding-right: 10px;
+}
+
+.contact-us i {
+    font-size: 150%;
+}
+
+.footer-products h6:before {
+    content: '|';
+    padding-right: 10px;   
+}
+
+.footer-container ul {
+    list-style: none;    
+}
+
+.newsletter h6:before {
+    content: '|';
+    padding-right: 10px;
+}
+
+.footer-container form input .newsletter [type=submit] {
+    background: #555;
+    border: none;
+    padding: 3px 25px;
+    margin-left: -5px;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
 
 /* --- Media Queries --- */
 

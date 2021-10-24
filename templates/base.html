@@ -69,12 +69,12 @@
                     <li class="list-inline-item dropdown">
                         <a class="dark-style nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg text-orange nav-bar"></i></div>
+                                <div><i class="fas fa-user fa-lg text-orange"></i></div>
                                 <p class="text-orange my-0">My Account</p>
                             </div>
                         </a>
                     
-                        <div class="dropdown-menu border-2" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-2 nav-bar" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="" class="dropdown-item">Product Management</a>
@@ -144,7 +144,10 @@
     {% endblock %}
 
     {% block content %}
+        
     {% endblock %}
+
+    {% include 'includes/footer.html' %} 
 
     {% block postloadjs %}
     {% endblock %}
