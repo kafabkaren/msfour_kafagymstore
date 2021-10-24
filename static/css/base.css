@@ -1,0 +1,145 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #EAEDED;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Icon styling */
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.service-icon {
+    font-size: 36px;
+    margin: 10%;
+    color: #F7941E;
+}
+
+/* Icon styling */
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.service-icon {
+    font-size: 36px;
+    margin: 10%;
+    color: #F7941E;
+}
+
+/* Button styling */
+
+.see-products-btn {
+    background-color: #F7941E;
+    color: #FFFFFF;
+    min-width: 260px;
+    text-decoration: none !important;
+}
+
+.btn-orange {
+    background-color: #F7941E;
+    color: #FFFFFF;
+}
+
+.btn-orange:hover {
+    background-color: #FAA61A;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.see-products-btn:hover,
+.see-products-btn:active,
+.see-products-btn:focus,
+.btn-orange:hover,
+.btn-orange:active,
+.btn-orange:focus {
+    background-color: #FAA61B;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.border-dark {
+    border: 1.5px solid #4B4D4F !important;
+}
+.border-orange {
+    border: 1.5px solid #F7941E !important;
+}
+
+.btt-button {
+    height: 42px;
+    color: #F7941E !important;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+    color: #F7941E;
+}
+
+/* Showcase area */
+
+#showcase {
+    background: url('/media/bg-showcase-img.jpg') no-repeat center center;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+.topnav {
+    background-color: #4B4D4F;
+}
+
+
+/* --- Media Queries --- */
+
+/* Slightly larger container on xl screens */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* Slightly larger container on medium and up */
+
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top:0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 105px;
+    }
+}
+
+/* Giving collapsed navbar some space on mobile devices */
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+}
