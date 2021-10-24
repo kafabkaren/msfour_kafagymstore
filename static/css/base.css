@@ -11,6 +11,12 @@ body {
     flex-direction: column;
 }
 
+/* Delivery banner */
+
+.bg-orange {
+    background-color: #F7941E;
+}
+
 /* Icon styling */
 
 .icon {
@@ -27,19 +33,20 @@ body {
     color: #F7941E;
 }
 
-/* Icon styling */
-
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
+.logo {
+    width: fit-content;
 }
 
-.service-icon {
-    font-size: 36px;
-    margin: 10%;
+.logo img {
+    width: 170px;
+    padding-left: 20px;
+}
+
+.text-orange {
+    color: #F7941E;
+}
+
+.title-orange {
     color: #F7941E;
 }
 
@@ -95,6 +102,72 @@ body {
 .remove-item {
     cursor: pointer;
     color: #F7941E;
+}
+
+/* Top navigation */
+
+.topnav { 
+    background-color: #4B4D4F;
+} 
+
+.navbar-area {
+    background-color: #606061;
+    height: 35px;
+    border-bottom: #F7941E 3px solid;
+}
+
+/* Main navigation */
+
+.home {
+    color: #F7941E !important;
+    text-decoration: none !important;
+}
+
+.our-store {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+.equipment {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+.outfit {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+.new-offers {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+.navbar-nav li a:hover {
+    color: #F7941E!important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-nav .active {
+    color: #F7941E !important;
+}
+
+.home,
+.our-store::before,
+.equipment::before,
+.outfit::before,
+.new-offers::before {
+    content: '|';
+    padding-right: 10px;
+}
+
+.our-store,
+.equipment,
+.outfit,
+.new-offers {
+    content: '|';
+    padding-right: 10px;
 }
 
 /* Showcase area */

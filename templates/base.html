@@ -48,7 +48,7 @@
         <!-- Header topnavigation -->
         <div id="topnav" class="row topnav pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="logo nav-link main-logo-link"><img src="" class="my-0" alt="kafagym-store logo"></a>
+                <a href="{% url 'home' %}" class="logo nav-link main-logo-link"><img src="{% static '/media/Kafagym-store.png' %}" class="my-0" alt="kafagym-store logo"></a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
@@ -69,7 +69,7 @@
                     <li class="list-inline-item dropdown">
                         <a class="dark-style nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg text-orange"></i></div>
+                                <div><i class="fas fa-user fa-lg text-orange nav-bar"></i></div>
                                 <p class="text-orange my-0">My Account</p>
                             </div>
                         </a>
@@ -119,6 +119,17 @@
                     </li>
                 </ul>
             </div>
+        </div>
+
+        <!-- Header navigation bar -->
+        <div class="row navbar-area">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
         </div>
 
     </header>
