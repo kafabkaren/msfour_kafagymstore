@@ -26,8 +26,8 @@ class Product(models.Model):
     rating = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    is_discount = models.BooleanField(default=False, null=True, blank=True)
-    discount_price = models.DecimalField(max_digits=6, decimal_places=2,
+    is_onsale = models.BooleanField(default=False, null=True, blank=True)
+    onsale_price = models.DecimalField(max_digits=6, decimal_places=2,
                                          default=0, null=True, blank=True)
 
     def __str__(self):
