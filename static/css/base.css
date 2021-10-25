@@ -275,6 +275,22 @@ body {
     text-transform: uppercase;
 }
 
+/* overlays */
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #EAEDED;
+    z-index: -1;
+}
+
+.cart-container {
+    margin-top: 10px;
+}
+
 
 /* --- Media Queries --- */
 
