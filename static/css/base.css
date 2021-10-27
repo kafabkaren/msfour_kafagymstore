@@ -291,6 +291,19 @@ body {
     margin-top: 10px;
 }
 
+/* Badge */
+
+.badge {
+    background-color: #F7941E;
+    color: #FFF;
+}
+
+.badge:hover {
+    background-color: #FAA61B;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
 
 /* --- Media Queries --- */
 
