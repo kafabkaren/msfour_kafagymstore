@@ -51,7 +51,7 @@
                 <a href="{% url 'home' %}" class="logo nav-link main-logo-link"><img src="{% static '/media/kafagymstore_logo.png' %}" class="my-0" alt="kafagym-store logo"></a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="">
+                <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-2" type="text" name="q" placeholder="Search our store...">
                         <div class="input-group-append">
