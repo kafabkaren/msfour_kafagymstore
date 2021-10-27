@@ -20,9 +20,9 @@
                 Equipment
             </a>
             <div class="dropdown-menu dark-style boder-0" aria-labelledby="equipment-link">
-                <a href="#" class="dropdown-item">Exercise Machines</a>
-                <a href="#" class="dropdown-item">Weights</a>
-                <a href="#" class="dropdown-item">All Equipment</a>
+                <a href="{% url 'products' %}?category=exercise_machines" class="dropdown-item">Exercise Machines</a>
+                <a href="{% url 'products' %}?category=weights" class="dropdown-item">Weights</a>
+                <a href="{% url 'products' %}?category=exercise_machines,weights" class="dropdown-item">All Equipment</a>
             </div>           
         </li>
         <li class="nav-item dropdown">
@@ -30,9 +30,9 @@
                 Outfit
             </a>
             <div class="dropdown-menu dark-style boder-0" aria-labelledby="equipment-link">
-                <a href="#" class="dropdown-item">Shoes</a>
-                <a href="#" class="dropdown-item">Sport Clothes</a>
-                <a href="#" class="dropdown-item">All Outfits</a>
+                <a href="{% url 'products' %}?category=shoes" class="dropdown-item">Shoes</a>
+                <a href="{% url 'products' %}?category=sport_clothes" class="dropdown-item">Sport Clothes</a>
+                <a href="{% url 'products' %}?category=shoes,sport_clothes" class="dropdown-item">All Outfits</a>
             </div>           
         </li>
         <li class="nav-item dropdown">
@@ -40,9 +40,9 @@
                 New Offers
             </a>
             <div class="dropdown-menu dark-style boder-0" aria-labelledby="equipment-link">
-                <a href="#" class="dropdown-item">All-In-One</a>
-                <a href="#" class="dropdown-item">Supplements</a>
-                <a href=""#" class="dropdown-item">All New Offers</a>
+                <a href="{% url 'products' %}?category=all_in_one" class="dropdown-item">All-In-One</a>
+                <a href="{% url 'products' %}?category=supplements" class="dropdown-item">Supplements</a>
+                <a href="{% url 'products' %}?category=all_in_one,supplements" class="dropdown-item">All New Offers</a>
             </div>           
         </li>
         <li class="nav-item">
