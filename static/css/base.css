@@ -304,6 +304,20 @@ body {
     font-weight: bold;
 }
 
+.btt-button {
+    height: 42px;
+    color: #F7941E !important;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+    color: #F7941E;
+}
+
 
 /* --- Media Queries --- */
 
