@@ -46,6 +46,14 @@ body {
     color: #F7941E;
 }
 
+.text-orange-cart {
+    color: #F7941E ;
+}
+
+.text-orange-cart:hover {
+    color: #F7941E ;
+}
+
 .title-orange {
     color: #F7941E;
 }
@@ -85,6 +93,14 @@ body {
 
 .border-dark {
     border: 1.5px solid #4B4D4F !important;
+}
+
+.dark-style {
+    color: #4B4D4F;
+}
+
+.cart-style {
+    color: aqua !important;
 }
 .border-orange {
     border: 1.5px solid #F7941E !important;

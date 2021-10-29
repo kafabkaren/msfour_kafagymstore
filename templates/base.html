@@ -104,9 +104,9 @@
                     </li>
 
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}dark-style{% endif %} nav-link" href="{% url 'view_cart' %}">
-                            <div class="text-center text-orange">
-                                <div><i class="fas fa-shopping-cart fa-lg text-orange"></i></div>
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-orange-cart{% endif %} nav-link" href="{% url 'view_cart' %}">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                                     <p class="my-0">
                                         {% if grand_total %}
                                             {{ grand_total|floatformat:2 }} SEK
