@@ -122,6 +122,16 @@ body {
     color: #F7941E;
 }
 
+.btn-increment-decrement {
+    background-color: #F7941E;
+    color: #FFF;
+}
+
+.btn-increment-decrement:hover {
+    background-color: #FAA61A;
+    color: #4B4D4F;
+}
+
 /* Top navigation */
 
 .topnav { 
