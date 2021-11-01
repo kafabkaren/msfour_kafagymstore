@@ -210,6 +210,39 @@ body {
     background-color: #4B4D4F;
 }
 
+/* Toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-bg {
+    background-color: #EAEDED;
+}
+
+.toast-success {
+    background-color: #4CAF50;
+}
+
+.toast-error {
+    background-color: #FF5252;
+}
+
+.toast-warning {
+    background-color: #FFC107;
+}
+
+.toast-info {
+    background-color: #2196F3;
+}
+
 /* Footer */
 
 #footer {
