@@ -6,6 +6,46 @@
         </button>
     </div>
     <div class="toast-body toast-bg">
-        {{ message }}
+        <div class="row">
+            <div class="col">
+                {{ message }}
+            </div>
+        </div>
+        {% if grand_total %}
+            <p class="logo-font toast-bg text-dark py-1">YOUR CART({{ product_count }})</p>
+            <div class="cart-toast-wrapper m-2">
+                {% for item in cart_items %}
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            <img src="{{ item.product.image.url }}" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><b>{{ item.product.name }}</b></p>
+                            <p class="my-0 small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <b><p class="mt-3 mb-1 dark-style">
+                        Total{% if free_delivery_delta > 0 %} (Exc. delivery){% endif %}:
+                        <span class="float-right">{{ total|floatformat:2 }} SEK</span>
+                    </p></b>
+                    {% if free_delivery_delta > 0 %}
+                        <p class="mb-0 p-2 bg-warning shadow-sm dark-style text-center">
+                            Spend <b>{{ free_delivery_delta }} SEK</b> more to get free delivery next day!
+                        </p>
+                    {% endif %}
+                    <a href="{% url 'view_cart' %}" class="btn btn-orange btn-block rounded-2">
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        <span class="text-uppercase">Secure Checkout</span>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
     </div>
 </div>
