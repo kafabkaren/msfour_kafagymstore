@@ -29,6 +29,7 @@ class Product(models.Model):
     is_onsale = models.BooleanField(default=False, null=True, blank=True)
     onsale_price = models.DecimalField(max_digits=6, decimal_places=2,
                                          default=0, null=True, blank=True)
+    stock = models.IntegerField(null=True)
 
     def __str__(self):
         return self.name

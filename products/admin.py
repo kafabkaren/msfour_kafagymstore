@@ -13,6 +13,7 @@ class ProductAdmin(admin.ModelAdmin):
         'image',
         'is_onsale',
         'onsale_price',
+        'stock',
     )
 
     ordering = ('sku',)
@@ -21,6 +22,8 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
+        'image_url',
+        'image',
     )
 
 admin.site.register(Product)

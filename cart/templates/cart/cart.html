@@ -47,7 +47,12 @@
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">{{ item.product.price }} SEK</p>
+                                    <p class="my-0">{{ item.product.price }}SEK</p>
+                                    <!-- {% if not item.product.is_onsale %}
+                                        <p class="my-0">{{ item.product.price }}SEK</p>
+                                    {% else %}
+                                        <p class="my-0">{{ item.product.onsale_price }}SEK</p>
+                                    {% endif %} -->
                                 </td>
                                 <td class="py-3 w-25">
                                     <form action="{% url 'update_cart' item.item_id %}" method="POST" class="form update-form">
@@ -83,6 +88,11 @@
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">{{ item.product.price | calc_subtotal:item.quantity }} SEK</p>
+                                    <!-- {% if not item.product.is_onsale %}
+                                        <p class="my-0">{{ item.product.price | calc_subtotal:item.quantity }} SEK</p>
+                                    {% else %}
+                                        <p class="my-0">{{ item.product.onsale_price | calc_subtotal:item.quantity }} SEK</p>
+                                    {% endif %} -->
                                 </td>
                             </tr>
                         {% endfor %}
