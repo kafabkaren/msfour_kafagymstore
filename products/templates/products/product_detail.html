@@ -146,10 +146,14 @@
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <button type="submit" class="btn btn-orange rounded-2 shadow mt-5 ms-2">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <span class="text-uppercase">Add to Cart</span>
-                                </button>
+                                {% if product.stock <= 0 %}
+                                    <h5 class="btn btn-out_of_stock rounded-2 shadow mt-5 ms-2 text-uppercase"><i class="fas fa-box-open"></i> Out of Stock</h5>
+                                {% else %}
+                                    <button type="submit" class="btn btn-orange rounded-2 shadow mt-5 ms-2">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span class="text-uppercase">Add to Cart</span>
+                                    </button>
+                                {% endif %}
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}

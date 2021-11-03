@@ -72,6 +72,12 @@ body {
     color: #FFFFFF;
 }
 
+.btn-out_of_stock {
+    background-color: #DD3545;
+    color: #FFF;
+    pointer-events: none;
+}
+
 .btn-orange:hover {
     background-color: #FAA61A;
     color: #FFFFFF;
