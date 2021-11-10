@@ -58,6 +58,10 @@ body {
     color: #F7941E;
 }
 
+.text-dark {
+    color: #4B4D4F;
+}
+
 /* Button styling */
 
 .see-products-btn {
