@@ -10,6 +10,8 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(to=User, on_delete=models.CASCADE)
     status = models.IntegerField(choices=STATUS, default=0)

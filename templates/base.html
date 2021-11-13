@@ -34,7 +34,11 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Kafagym Store {% block extra_title %}{% endblock %}</title>
+    <title>
+        {% block title %}
+         Kafagym Store
+        {% endblock %}
+    </title>
   </head>
 
   <body>

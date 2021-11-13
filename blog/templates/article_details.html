@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Kafagym Store - {{ post.title }}{% endblock %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col text-left mt-5">
+                <h1>{{ post.title }}</h1>
+                <small>Written by: {{ post.author.first_name }} {{ post.author.last_name }}</small><br/>
+                <small>Created Date: {{ post.date_created }}</small><br/>
+                <hr>
+                <br/>
+                
+                <img src="#" alt="img"><br/>
+                {{ post.content }}
+
+                <br/><br/>
+                <a href="{% url 'view_blog' %}" class="btn btn-orange text-uppercase">Home Blog</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
