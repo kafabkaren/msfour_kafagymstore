@@ -18,7 +18,7 @@
         <div class="row my-2">
             
             {% for post in object_list %}
-                <div class="col-md-6 card mb-2" >
+                <div class="col-md-6 card mb-2 px-5" >
                     
                     <div class="row">
                     <div class="col-md-4">
@@ -27,8 +27,8 @@
                     <div class="col-md-8">
                         <div class="card-body">
                         <a href="{% url 'article-details' post.pk %}" class="card-title text-left">{{ post.title }}</a>
+                        <p class="card-text"><small class="text-muted">By: {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.author.email }}</small></p>
                         <p class="card-text text-justify">{{ post.content }}</p>
-                        <p class="card-text"><small class="text-muted">{{ post.author.first_name }} {{ post.author.last_name }} - {{ post.author.email }}</small></p>
                         </div>
                     </div>
                     </div>
@@ -36,42 +36,4 @@
                 {% endfor %}
             </div>
     </div>
-        <!-- <div class="row my-3"> -->
-            <!-- <div class="col text-center mt-3">
-            <h1 class="text-center text-orange">Blog Post</h1>
-            <ul>
-            
-            <div class="row">
-                {% for post in object_list %}
-                <div class="col-md-6 card mb-3" >
-                    
-                    <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <a href="{% url 'article-details' post.pk %}" class="card-title text-left">{{ post.title }}</a>
-                        <p class="card-text text-justify">{{ post.content }}</p>
-                        <p class="card-text"><small class="text-muted">{{ post.author.first_name }} {{ post.author.last_name }} - {{ post.author.email }}</small></p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-            </ul>
-            </div> -->
-
-            <!-- <div class="col text-left mt-3">
-                <h1 class="text-center">Blog Post</h1>
-                <ul>
-                {% for post in object_list %}
-                <li><a href="{% url 'article-details' post.pk %}">{{ post.title }}</a> - {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.author.email }}<br/>
-                    {{ post.content }}</li>
-                {% endfor %}
-                </ul>
-            </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
 {% endblock %}
