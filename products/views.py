@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+from .forms import ReviewForm
 
-from .models import Product, Category
+from .models import Product, Category, ReviewRating
 
 # Create your views here.
 
@@ -67,3 +68,31 @@ def product_detail(request, product_id):
     }
     
     return render(request, 'products/product_detail.html', context)
+
+def submit_review(request, product_id):
+    # Variable to store the previous url when redirected back
+    url = request.META.get('HTTP_REFERER')
+    if request.method == 'POST':
+        try:
+            # If the review exists
+            reviews = ReviewRating.objects.get(user__id=request.user.id, product__id=product_id)
+            # Review update instead of a new review
+            form = ReviewForm(request.POST, instance=reviews)
+            form.save()
+            messages.success(request, 'Your review has been updated!')
+            return redirect(url)
+        except ReviewRating.DoesNotExist:
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                data = ReviewRating()
+                data.subject = form.cleaned_data['subject']
+                data.rating = form.cleaned_data['rating']
+                data.review = form.cleaned_data['review']
+                # Saving the reviewer ip
+                data.ip = request.META.get('REMOTE_ADDR')
+                data.product_id = product_id
+                data.user_id = request.user.id
+                data.save()
+                messages.success(request, 'Thank you! Your review has been submitted.')
+                return redirect(url)
+
