@@ -294,6 +294,10 @@ body {
     padding-right: 0;
 }
 
+.rating-star i {
+    color: #ffb503 !important;
+}
+
 /* Click and hover rating stars */
 input:checked ~ label, label:hover ~ label{
     color: #ffb503;

@@ -63,8 +63,12 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    # Get the reviews
+    reviews = ReviewRating.objects.filter(product_id=product.id, status=True)
+
     context = {
         'product': product,
+        'reviews': reviews,
     }
     
     return render(request, 'products/product_detail.html', context)
