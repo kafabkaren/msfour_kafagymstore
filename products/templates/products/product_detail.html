@@ -42,13 +42,30 @@
                         </p>
                     {% endif %}
                     {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        <!-- Review and rating functions -->
+                        <small class="text-muted">
+                            <div class="rating-star">
+                                <span>
+                                    <i class="fa fa-star{% if product.averageReview < 0.5 %}-o {% elif product.averageReview >= 0.5 and product.averageReview < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview < 1.5 %}-o {% elif product.averageReview >= 1.5 and product.averageReview < 2 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview < 2.5 %}-o {% elif product.averageReview >= 2.5 and product.averageReview < 3 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview < 3.5 %}-o {% elif product.averageReview >= 3.5 and product.averageReview < 4 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview < 4.5 %}-o {% elif product.averageReview >= 4.5 and product.averageReview < 5 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <span>
+                                        {{ product.countReview }} reviews
+                                    </span>
+                                </span>
+                            </div>
+                        </small>
+                        <!-- /.review and rating functions -->
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
-                    <br><br>
+                    <br>
+                    <hr>
                     <h6 class="font-weight-bold">About this item</h6>
                     <p class="mt-3 text-justify">{{ product.description }}</p>
+                    <hr>
                     <form action="{% url 'add_to_cart' product.id %}" class="form" method="POST">
                         {% csrf_token %}
                         <div class="form-row"> 
@@ -195,12 +212,24 @@
                                 <p>Make sure you sign in to post a review. <span><a href="{% url 'account_login' %}" class="text-orange">Sign in</a> now</span></p>
                             {% endif %}
                         </div>
+                        <!-- /.area for rating stars -->
                     </form>
                     <br>
-                    <section class="section-heading">
+                    <!-- Area for review & rating stars -->
+                    <div class="section-heading">
                         <header>
                             <h3 class="text-orange">Customer Reviews</h3>
+                            <div class="rating-star">
+                                <span>
+                                    <i class="fa fa-star{% if product.averageReview < 0.5 %}-o {% elif product.averageReview >= 0.5 and product.averageReview < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview < 1.5 %}-o {% elif product.averageReview >= 1.5 and product.averageReview < 2 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview < 2.5 %}-o {% elif product.averageReview >= 2.5 and product.averageReview < 3 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview < 3.5 %}-o {% elif product.averageReview >= 3.5 and product.averageReview < 4 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if product.averageReview < 4.5 %}-o {% elif product.averageReview >= 4.5 and product.averageReview < 5 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                </span>
+                            </div>
                         </header>
+                        <br>
                         {% for review in reviews %}
                         <article class="card mb-3">
                             <div class="icontext w-100">
@@ -226,7 +255,8 @@
                             </div>
                         </article>
                         {% endfor %}
-                    </section>
+                    </div>
+                    <!-- /.area for review & rating stars -->
                 </div>
             </div>
         <!-- /.customer review -->
