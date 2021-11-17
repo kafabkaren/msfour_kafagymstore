@@ -80,9 +80,24 @@
                                             </p>
                                             {% endif %}
                                             {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star-half-alt mr-1"></i>{{ product.rating }} / 5</small>
+                                            <!-- Review and rating functions -->
+                                            <small class="text-muted">
+                                                <div class="rating-star">
+                                                    <span>
+                                                        <i class="fa fa-star{% if product.averageReview < 0.5 %}-o {% elif product.averageReview >= 0.5 and product.averageReview < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                                        <i class="fa fa-star{% if product.averageReview < 1.5 %}-o {% elif product.averageReview >= 1.5 and product.averageReview < 2 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                                        <i class="fa fa-star{% if product.averageReview < 2.5 %}-o {% elif product.averageReview >= 2.5 and product.averageReview < 3 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                                        <i class="fa fa-star{% if product.averageReview < 3.5 %}-o {% elif product.averageReview >= 3.5 and product.averageReview < 4 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                                        <i class="fa fa-star{% if product.averageReview < 4.5 %}-o {% elif product.averageReview >= 4.5 and product.averageReview < 5 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                                        <span>
+                                                            {{ product.countReview }} reviews
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </small>
+                                            <!-- /.review and rating functions -->
                                             {% else %}
-                                                <small class="text-muted">No Rating</small>
+                                            <small class="text-muted">No Rating</small>
                                             {% endif %}
                                         </div>
                                     </div>
@@ -123,6 +138,7 @@
             <i class="fas fa-arrow-alt-circle-up fa-lg mx-auto my-auto"></i>
         </a>
     </div>
+    <br>
 {% endblock %}
 
 {% block postloadjs %}

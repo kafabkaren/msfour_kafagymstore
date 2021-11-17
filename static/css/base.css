@@ -496,11 +496,6 @@ input[name='q']::placeholder {
     background-color: #FAA61B;
 }
 
-.allauth-form-inner-content a {
-	/* color: #17a2b8; text-info */
-}
-
-
 
 /* --- Media Queries --- */
 
