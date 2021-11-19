@@ -43,21 +43,6 @@
     </div>
 </li>
 
-<!-- <li class="list-inline-item">
-    <a href="#" class="{% if wishlist %}text-primary font-weight-bold{% else %}dark-style{% endif %} nav-link d-block d-lg-none">
-        <div class="text-center">
-            <div><i class="fas fa-heart fa-lg dark-style"></div>
-            <p class="my-0">
-                {% if wishlist %}
-                    {{ wishlist }} SEK
-                {% else %}
-                    0
-                {% endif %}
-            </p>
-        </div>
-    </a>
-</li> -->
-
 <li class="list-inline-item">
     <a href="{% url 'view_cart' %}" class="{% if grand_total %}text-info font-weight-bold{% else %}text-orange-cart{% endif %} nav-link d-block d-lg-none">
         <div class="text-center">

@@ -95,21 +95,6 @@
                     </li>
 
                     <li class="list-inline-item">
-                        <a class="{% if wishlist %}text-info font-weight-bold{% else %}dark-style{% endif %} nav-link" href="">
-                            <div class="text-center">
-                                <div><i class="fas fa-heart fa-lg text-orange"></i></div>
-                                    <p class="text-orange my-0">
-                                        {% if wishlist %}
-                                            {{ wishlist }}
-                                        {% else %}
-                                            0
-                                        {% endif %}
-                                    </p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-orange-cart{% endif %} nav-link" href="{% url 'view_cart' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-cart fa-lg"></i></div>

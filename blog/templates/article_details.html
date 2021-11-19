@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col text-left mt-5">
-                <h1>{{ post.title }}</h1>
+                <h1 class="text-orange">{{ post.title }}</h1>
                 <small>Written by: {{ post.author.first_name }} {{ post.author.last_name }}</small><br/>
                 <small>Created Date: {{ post.date_created }}</small><br/>
                 <hr>
@@ -23,31 +23,36 @@
                         <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid active">
                 </div>
                 <br>
-                <div>
+                <div class="text-justify">
                     {{ post.content }}
                 </div>
                 <br/>
                 <hr>
-                <h2>
+                <h2 class="text-orange">
                     Comments...
                 </h2>
                 <br/>
-                {% if not post.comments.all %}
-                    There is no comments about this article yet.
-                    <a href="#">Add One</a>
-                {% else %}
-                    {% for comment in post.comments.all %}
-                        <strong>
-                            {{ comment.name }} - 
-                            {{ comment.date_created }}
-                        </strong>
-                        <br>
-                        {{ comment.content }}
-                        <br/><br/>
-                        <hr>
-                    {% endfor %}
-                {% endif %}
-                <br/><br/>
+                    {% if not post.comments.all %}
+                        There is no comments about this article yet.
+                        <a href="">Add One</a>
+                    {% else %}
+                    <a href="">Add Comment</a>
+                    <br><br>
+                        {% for comment in post.comments.all %}
+                            <strong>
+                                {{ comment.name }} - 
+                                {{ comment.date_created }}
+                            </strong>
+                            <br>
+                            <div class="text-justify">
+                                {{ comment.content }}
+                            </div>
+                            <br/><br/>
+                            <hr>
+                        {% endfor %}
+                    {% endif %}
+                    <br><br>
+
                 <a href="{% url 'view_blog' %}" class="btn btn-orange text-uppercase">Home Blog</a>
             </div>
         </div>
