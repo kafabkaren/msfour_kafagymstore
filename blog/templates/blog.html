@@ -9,31 +9,44 @@
         </div>
     </div>
 {% endblock %}
-
+<br><br>
 {% block content %}
-    <div class="container">
-        <div class="my-5">
-            <h1 class="text-center text-orange">Blog Post</h1>
-        </div>
-        <div class="row my-2">
-            
-            {% for post in object_list %}
-                <div class="col-md-6 card mb-2 px-5" >
-                    
-                    <div class="row">
-                    <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
+<div class="container">
+    <div class="text-center text-orange my-5">
+        <h3>Blog Posts</h3>
+        <hr/>
+    </div>
+    <div class="row">
+        {% for post in object_list %}
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
+            <div class="card mb-5 shadow-sm">
+                {% if post.image %}
+                        <a href="{% url 'article-details' post.pk %}">
+                                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
+                        </a>
+                    {% endif %}
+                <div class="card-body">
+                    <div class="card-title">
+                        <h2>
+                            {{ post.title }}
+                        </h2>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <a href="{% url 'article-details' post.pk %}" class="card-title text-left">{{ post.title }}</a>
-                        <p class="card-text"><small class="text-muted">By: {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.author.email }}</small></p>
-                        <p class="card-text text-justify">{{ post.content }}</p>
+                    <div class="card-text">
+                        <div class="blog-date">
+                                <p class="card-text"><small class="text-muted">By: {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.author.email }}</small></p>
+                                <p class="card-text"><small class="text-muted">Posted on: {{ post.date_created }}</small></p>
+                        </div>
+                        <br>
+                            <p class="text-justify">{{ post.content|truncatechars:120 }}</p>
+                        <div class="blog-read-more text-center mb-2">
+                            <a href="{% url 'article-details' post.pk %}" class="btn btn-orange">Read More...</a>
                         </div>
                     </div>
-                    </div>
                 </div>
-                {% endfor %}
             </div>
+            
+        </div>
+        {% endfor %}
     </div>
+</div>
 {% endblock %}

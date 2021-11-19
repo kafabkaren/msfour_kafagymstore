@@ -14,8 +14,7 @@
 
 {% block content %}
     <div class="overlay"></div>
-        <!-- Product details -->
-        <div class="border rounded-2">
+    <!-- Product details -->
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                     <div class="image-container my-5">
@@ -174,7 +173,7 @@
         <br>
         
         {% if product.stock == 0 %}
-            <p class="text-center"><i class="fas fa-exclamation-circle text-orange"></i> You cannot make a review for this product. It is out of stock for the moment.</p>
+            <p class="text-center"><i class="fas fa-exclamation-circle text-orange"></i> No rating and review options available for this product. It is out of stock for the moment.</p>
         {% else %}
         <!-- Customer review -->
             <div class="row">
@@ -260,10 +259,7 @@
                 </div>
             </div>
         <!-- /.customer review -->
-        
         {% endif %}
-    </div>
-    <br>
 {% endblock %}
 
 {% block postloadjs %}

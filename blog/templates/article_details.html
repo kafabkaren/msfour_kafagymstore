@@ -19,14 +19,17 @@
                 <small>Created Date: {{ post.date_created }}</small><br/>
                 <hr>
                 <br/>
-                
-                <img src="#" alt="img"><br/>
-                {{ post.content }}
-
+                <div class="container">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid active">
+                    </a>
+                    {{ post.content }}
+                </div>
+                                
                 <br/><br/>
                 <a href="{% url 'view_blog' %}" class="btn btn-orange text-uppercase">Home Blog</a>
             </div>
         </div>
     </div>
+    <br/>
 
 {% endblock %}
