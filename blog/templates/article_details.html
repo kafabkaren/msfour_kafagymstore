@@ -19,12 +19,34 @@
                 <small>Created Date: {{ post.date_created }}</small><br/>
                 <hr>
                 <br/>
-                <div class="container">
+                <div class="article-img">
                         <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid active">
-                    </a>
+                </div>
+                <br>
+                <div>
                     {{ post.content }}
                 </div>
-                                
+                <br/>
+                <hr>
+                <h2>
+                    Comments...
+                </h2>
+                <br/>
+                {% if not post.comments.all %}
+                    There is no comments about this article yet.
+                    <a href="#">Add One</a>
+                {% else %}
+                    {% for comment in post.comments.all %}
+                        <strong>
+                            {{ comment.name }} - 
+                            {{ comment.date_created }}
+                        </strong>
+                        <br>
+                        {{ comment.content }}
+                        <br/><br/>
+                        <hr>
+                    {% endfor %}
+                {% endif %}
                 <br/><br/>
                 <a href="{% url 'view_blog' %}" class="btn btn-orange text-uppercase">Home Blog</a>
             </div>
