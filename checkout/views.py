@@ -52,8 +52,7 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your cart wasn't "
-                        "found in our database. "
+                        "One of the products in your cart wasn't found in our database."
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -61,9 +60,7 @@ def checkout(request):
 
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success',
-                                    args=[order.order_number]))
-
+            return redirect(reverse('checkout_success', args=[order.order_number]))
     else:
         cart = request.session.get('cart', {})
         if not cart:
@@ -79,7 +76,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-    order_form = OrderForm()
+        order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
