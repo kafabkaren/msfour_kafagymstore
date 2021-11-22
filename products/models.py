@@ -24,12 +24,12 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=8, decimal_places=2)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     rating = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     is_onsale = models.BooleanField(default=False, null=True, blank=True)
-    onsale_price = models.DecimalField(max_digits=6, decimal_places=2,
+    onsale_price = models.DecimalField(max_digits=10, decimal_places=2,
                                          default=0, null=True, blank=True)
     stock = models.IntegerField(null=True)
 
