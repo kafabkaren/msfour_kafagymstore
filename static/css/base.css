@@ -492,6 +492,7 @@ input[name='q']::placeholder {
 .allauth-form-inner-content input[type='submit']:hover {
 	color: #fff;
     background-color: #FAA61B;
+    border-color: #F7941E;
 }
 
 /* Blog styling */
