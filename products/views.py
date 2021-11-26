@@ -75,6 +75,7 @@ def product_detail(request, product_id):
     
     return render(request, 'products/product_detail.html', context)
 
+@login_required
 def submit_review(request, product_id):
     # Variable to store the previous url when redirected back
     url = request.META.get('HTTP_REFERER')

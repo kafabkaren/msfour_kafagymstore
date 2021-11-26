@@ -215,13 +215,14 @@
                             {% if user.is_authenticated %}
                                 <input class="btn btn-orange" type="submit" value="Submit Review">
                             {% else %}
-                                <p>Make sure you sign in to post a review. <span><a href="{% url 'account_login' %}" class="text-orange">Sign in</a> now</span></p>
+                                <p>Make sure you are signed in to post a review. <span><a href="{% url 'account_login' %}" class="text-orange">Sign in</a> now</span></p>
                             {% endif %}
                         </div>
                         <!-- /.area for rating stars -->
                     </form>
                     <br>
                     <!-- Area for review & rating stars -->
+                    {% if user.is_authenticated %}
                     <div class="section-heading">
                         <header>
                             <h3 class="text-orange">Customer Reviews</h3>
@@ -262,6 +263,7 @@
                         </article>
                         {% endfor %}
                     </div>
+                    {% endif %}
                     <!-- /.area for review & rating stars -->
                 </div>
             </div>
