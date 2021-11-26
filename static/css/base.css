@@ -381,6 +381,15 @@ input:checked + label:hover, input:checked ~ label:hover, input:checked ~ label:
     padding-right: 10px;
 }
 
+.footer-products li a {
+    color: #4B4D4F !important;
+    text-decoration: none;
+}
+
+.footer-products li a:hover {
+    color: #fff !important;
+}
+
 .footer-container ul {
     list-style: none;
 }

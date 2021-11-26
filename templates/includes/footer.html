@@ -20,25 +20,24 @@
                     <p><i class="fas fa-mobile-alt"></i> 019-55 55 55</p>
                     <p><i class="fas fa-envelope"></i> kafagymstore@example.com</p>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 footer-products">
+            <div class="col-md-3 col-sm-6 col-xs-12">
                 <h6><b>Products</b></h6>
-                <ul class="no-bullets">
-                    <li>
-                        <a href="{% url 'products' %}?category=exercise_machines" class="dropdown-item">Exercise Machines</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'products' %}?category=weights" class="dropdown-item">Weights</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'products' %}?category=shoes" class="dropdown-item">Shoes</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'products' %}?category=sport_clothes" class="dropdown-item">Sport Clothes</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                    </li>
-                </ul>
+                    <ul class="list-group footer-products">
+                        <li>
+                            <a href="{% url 'products' %}?category=exercise_machines,weights">
+                                All Equipment</a>
+                            
+                        </li>
+                        <li>
+                            <a href="{% url 'products' %}?category=shoes,sport_clothes" >All Outfits item</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'products' %}?category=all_in_one,supplements">New Offers</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'view_blog' %}">Our Blog</a>
+                        </li>
+                    </ul>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12 newsletter">
                 <h6><b>Subscribe to Our Newsletter</b></h6>   
