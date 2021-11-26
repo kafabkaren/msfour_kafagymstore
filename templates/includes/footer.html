@@ -18,17 +18,27 @@
                 <h6><b>Contact Us</b></h6>                  
                     <p><i class="fas fa-map-marker-alt"></i> Granrisvägen 00,<br> 702 35 Örebro</p>Sweden.
                     <p><i class="fas fa-mobile-alt"></i> 019-55 55 55</p>
-                    <p><i class="fas fa-envelope"></i> kafamem@gmail.com</p>
+                    <p><i class="fas fa-envelope"></i> kafagymstore@example.com</p>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12 footer-products">
                 <h6><b>Products</b></h6>
-                    <ul class="no-bullets">
-                        <li>Exercise Machines</li>
-                        <li>Weights</li>
-                        <li>Shoes</li>
-                        <li>Sport Clothes</li>
-                        <li>All Products</li>
-                    </ul>
+                <ul class="no-bullets">
+                    <li>
+                        <a href="{% url 'products' %}?category=exercise_machines" class="dropdown-item">Exercise Machines</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'products' %}?category=weights" class="dropdown-item">Weights</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'products' %}?category=shoes" class="dropdown-item">Shoes</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'products' %}?category=sport_clothes" class="dropdown-item">Sport Clothes</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                    </li>
+                </ul>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12 newsletter">
                 <h6><b>Subscribe to Our Newsletter</b></h6>   
