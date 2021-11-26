@@ -53,11 +53,6 @@
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">{{ item.product.price }} SEK</p>
-                                    <!-- {% if not item.product.is_onsale %}
-                                        <p class="my-0">{{ item.product.price }}SEK</p>
-                                    {% else %}
-                                        <p class="my-0">{{ item.product.onsale_price }}SEK</p>
-                                    {% endif %} -->
                                 </td>
                                 <td class="py-3 w-25">
                                     <form action="{% url 'update_cart' item.item_id %}" method="POST" class="form update-form">

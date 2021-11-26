@@ -36,19 +36,24 @@
         <div class="container category-title">
             <h2 class="title-orange text-center">Featured Categories</h2>
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card card-cat h-100 border-0">
-                            <a>
-                               <img src="#" class="card-img-top img-fluid" alt="">
+                {% for category in categories %} 
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card card-cat h-100 border-0">
+                        {% if category.category_img %}
+                            <a href="{% url 'all_products' %}?category={{ category.name }}">
+                            <img src="{{ category.category_img.url }}" class="card-img-top img-fluid" alt="{{ category.name }}">
+                            </a>  
+                        {% else %}
+                            <a href="">
+                            <img src="{{ MEDIA_URL}}placeholder.jpg" class="card-img-top img-fluid" alt="{{ category.name }}">
                             </a>
-                            <a>
-                               <img src="#" class="card-img-top img-fluid" alt="">
-                            </a>
+                        {% endif %}  
                             <div class="card-body pb-0 text-center">
-                                <h5 class="card-title sm-heading"></h5>
-                            </div>                    
+                            <h5 class="card-title sm-heading">{{ category.name }}</h5>
+                            </div>
+                        </div>
                     </div>
-                </div>           
+                {% endfor %}           
             </div>
         </div>
     </section>
