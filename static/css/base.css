@@ -217,6 +217,10 @@ body {
     background-color: #4B4D4F;
 }
 
+.black-week {
+    font-size: 30px;
+}
+
 /* Toasts */
 
 .message-container {
@@ -386,7 +390,7 @@ input:checked + label:hover, input:checked ~ label:hover, input:checked ~ label:
 }
 
 .footer-products li a:hover {
-    color: #fff !important;
+    color: #EAEDED !important;
 }
 
 .footer-container ul {

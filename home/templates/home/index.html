@@ -19,7 +19,7 @@
                 <div class="row showcase h-100">
                     <div class="col-7 col-md-6 my-auto">
                     <h1 class="text-uppercase text-white font-weight-bold"><strong>Sport</strong><br><strong class="text-orange">Equipment</strong></h1>
-                    <h4 class="text-white">UP TO <strong class="text-orange">15% OFF</strong></h4>
+                    <h4 class="text-white text-uppercase"><small>this</small> <strong id="blackWeek" class="text-orange font-weight-bold text-uppercase black-week">black week!</strong></h4>
                         <div class="my-5">
                             <h3>
                                 <a href="{% url 'products' %}" class="see-products-btn btn-lg rounded-2 text-uppercase py-3">See Products</a>
@@ -104,4 +104,15 @@
     </section>
     <!-- /.service section -->
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        var blink_speed = 1000;
+        var kf = setInterval(function (){
+            var blackWeek = document.getElementById('blackWeek');
+        blackWeek.style.visibility = (blackWeek.style.visibility == 'hidden' ? '': 'hidden');
+        }, blink_speed);
+    </script>
 {% endblock %}
