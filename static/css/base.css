@@ -146,9 +146,8 @@ body {
     background-color: #4B4D4F;
 }
 
-.navbar-area {
-    background-color: #606061;
-    height: 35px;
+.bg-dark {
+    background-color: #606061 !important;
     border-bottom: #F7941E 3px solid;
 }
 
@@ -565,10 +564,33 @@ input[name='q']::placeholder {
     }
 }
 
+/* Giving collapsed navbar some space on tablets devices */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .products {
+        margin-top: 100px;
+    }
+    .product-detail {
+        margin-top: 80px;
+    }
+    .showcase {
+        margin-top: 80px;
+    }
+}
+
 /* Giving collapsed navbar some space on mobile devices */
 
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .products {
+        margin-top: 90px;
+    }
+    .product-detail {
+        margin-top: 100px;
+    }
+    .cart {
+        display: none;
+    }
+    .showcase {
+        margin-top: 40px;
     }
 }
