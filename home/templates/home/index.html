@@ -32,28 +32,51 @@
     <!-- /.showcase section -->
 
     <!-- Categories Section --> 
-    <section id="categories">
-        <div class="container category-title">
-            <h2 class="title-orange text-center">Featured Categories</h2>
+    <section>
+        <div class="container featured-categories category-title">
+            <div class="mt-3">
+                <h2 class="title-orange text-center">Products Categories</h2>
+            </div>
             <div class="row">
-                {% for category in categories.all %} 
-                    <div class="col-12 col-md-6 col-lg-4 mb-4">
-                        <div class="card card-cat h-100 border-0">
-                        {% if category.category.img %}
-                            <a href="{% url 'all_products' %}?category={{ category.name }}">
-                            <img src="{{ category.category_img.url }}" class="card-img-top img-fluid" alt="{{ category.name }}">
-                            </a>  
-                        {% else %}
-                            <a href="">
-                            <img src="{{ MEDIA_URL}}placeholder.jpg" class="card-img-top img-fluid" alt="{{ category.name }}">
-                            </a>
-                        {% endif %}  
-                            <div class="card-body pb-0 text-center">
-                            <h5 class="card-title sm-heading">{{ category.name }}</h5>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
+                    <div class="card mb-5 shadow-sm">
+                        <div class="card-title">
+                            <h4 class="text-center mt-3">Our Equipment</h4>
+                        </div>
+                        <img src="{% static 'media/hybrid_magnetic_elliptical_machine.jpg' %}" alt="Product Categories Treadmill" class="img-fluid">
+                        <div class="card-body">
+                            <div class="blog-read-more text-center mb-2">
+                                <a href="{% url 'products' %}?category=exercise_machines,weights" class="btn btn-orange">Go To Categories</a>
                             </div>
                         </div>
                     </div>
-                {% endfor %}           
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
+                    <div class="card mb-5 shadow-sm">
+                        <div class="card-title">
+                            <h4 class="text-center mt-3">Outfit</h4>
+                        </div>
+                        <img src="{% static 'media/air-jordan.jpg' %}" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <div class="blog-read-more text-center mb-2">
+                                <a href="{% url 'products' %}?category=shoes,sport_clothes" class="btn btn--cta btn-orange">Go To Categories</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
+                    <div class="card mb-5 shadow-sm">
+                        <div class="card-title">
+                            <h4 class="text-center mt-3">New Offers</h4>
+                        </div>
+                        <img src="{% static 'media/protein_powder.jpg' %}" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <div class="blog-read-more text-center mb-2">
+                                <a href="{% url 'products' %}?category=all_in_one,supplements" class="btn btn-orange">Go To Categories</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
