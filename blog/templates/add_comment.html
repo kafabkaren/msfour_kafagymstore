@@ -1,0 +1,35 @@
+<!-- {% extends "base.html" %}
+{% block title %}Comment on Blog Post{% endblock %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col text-left mt-5">
+                <h1 class="text-orange">Add Comment</h1>
+                <br>
+                <div class="form-group">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button class="btn btn-orange">
+                                Add Comment
+                            </button>
+                        </form>
+                </div>
+
+                <a href="{% url 'view_blog' %}" class="btn btn-orange text-uppercase">Home Blog</a>
+            </div>
+        </div>
+    </div>
+    <br/>
+
+{% endblock %} -->

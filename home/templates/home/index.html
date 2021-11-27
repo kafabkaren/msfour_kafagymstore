@@ -36,10 +36,10 @@
         <div class="container category-title">
             <h2 class="title-orange text-center">Featured Categories</h2>
             <div class="row">
-                {% for category in categories %} 
+                {% for category in categories.all %} 
                     <div class="col-12 col-md-6 col-lg-4 mb-4">
                         <div class="card card-cat h-100 border-0">
-                        {% if category.category_img %}
+                        {% if category.category.img %}
                             <a href="{% url 'all_products' %}?category={{ category.name }}">
                             <img src="{{ category.category_img.url }}" class="card-img-top img-fluid" alt="{{ category.name }}">
                             </a>  

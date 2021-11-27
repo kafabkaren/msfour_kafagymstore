@@ -34,7 +34,7 @@
                 <br/>
                     {% if not post.comments.all %}
                         There is no comments about this article yet.
-                        <a href="">Add One</a>
+                        <a href="">Add Comment</a>
                     {% else %}
                     <a href="">Add Comment</a>
                     <br><br>
@@ -45,13 +45,13 @@
                             </strong>
                             <br>
                             <div class="text-justify">
-                                {{ comment.content }}
+                                {{ comment.body }}
                             </div>
-                            <br/><br/>
+                            <br/>
                             <hr>
                         {% endfor %}
                     {% endif %}
-                    <br><br>
+                    <br>
 
                 <a href="{% url 'view_blog' %}" class="btn btn-orange text-uppercase">Home Blog</a>
             </div>
