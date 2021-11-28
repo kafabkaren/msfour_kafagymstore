@@ -28,30 +28,26 @@
                 </div>
                 <br/>
                 <hr>
-                <h2 class="text-orange">
-                    Comments...
-                </h2>
                 <br/>
-                    {% if not post.comments.all %}
-                        There is no comments about this article yet.
-                        <a href="">Add Comment</a>
-                    {% else %}
-                    <a href="">Add Comment</a>
-                    <br><br>
-                        {% for comment in post.comments.all %}
-                            <strong>
-                                {{ comment.name }} - 
-                                {{ comment.date_created }}
-                            </strong>
-                            <br>
-                            <div class="text-justify">
-                                {{ comment.body }}
-                            </div>
-                            <br/>
-                            <hr>
-                        {% endfor %}
-                    {% endif %}
+
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <h2 class="text-orange">
+                        Write your Comment
+                    </h2>
+                    Comment Title:
+                    <input type="text" class="form-control" name="subject_line" required>
                     <br>
+                    Comment:
+                    <textarea class="form-control" name="Comment" rows="4" ></textarea>
+                    <br>
+                    {% if user.is_authenticated %}
+                        <input class="btn btn-orange" type="submit" value="Submit Comment">
+                    {% else %}
+                        <p>Make sure you are signed in to be able to comment. <span><a href="{% url 'account_login' %}" class="text-orange">Sign in</a> now</span></p>
+                    {% endif %}
+                </form>
+                    <br><br>
 
                 <a href="{% url 'view_blog' %}" class="btn btn-orange text-uppercase">Home Blog</a>
             </div>

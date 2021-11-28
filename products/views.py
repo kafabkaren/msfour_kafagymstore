@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.http import HttpResponse
 from .forms import ReviewForm
 from .forms import ProductForm
 
@@ -75,9 +76,9 @@ def product_detail(request, product_id):
     
     return render(request, 'products/product_detail.html', context)
 
-@login_required
+
 def submit_review(request, product_id):
-    # Variable to store the previous url when redirected back
+    # Url variable to store the previous url when redirected back
     url = request.META.get('HTTP_REFERER')
     if request.method == 'POST':
         try:
