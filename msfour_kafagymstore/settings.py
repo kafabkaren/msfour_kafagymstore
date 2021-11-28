@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-(-)qyik^^&isr=w10@c@&ug9dbzk%fv444s_#dvk&m3c5@81c!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['msfour_kafagymstore.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['msfour-kafagymstore.herokuapp.com', 'localhost']
 
 
 # Application definition
