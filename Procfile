@@ -1,1 +1,1 @@
-web: gunicorn msfour-kafagymstore.wsgi:application
+web: gunicorn msfour_kafagymstore.wsgi:application
