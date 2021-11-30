@@ -598,4 +598,24 @@ input[name='q']::placeholder {
     .showcase {
         margin-top: 40px;
     }
+    .navarea.logo-font {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner p {
+        font-size: .9rem;
+    }
 }
