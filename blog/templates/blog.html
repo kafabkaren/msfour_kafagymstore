@@ -21,10 +21,10 @@
         <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
             <div class="card mb-5 shadow-sm">
                 {% if post.image %}
-                        <a href="{% url 'article-details' post.pk %}">
-                                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
-                        </a>
-                    {% endif %}
+                    <a href="{% url 'article-details' post.pk %}">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
+                    </a>
+                {% endif %}
                 <div class="card-body">
                     <div class="card-title">
                         <h2>

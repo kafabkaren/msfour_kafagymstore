@@ -4,7 +4,6 @@ from .models import Post
 # from .forms import CommentForm
 
 
-# A class based view
 class view_blog(ListView):
     model = Post
     template_name = 'blog.html'
