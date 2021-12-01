@@ -12,10 +12,3 @@ class view_blog(ListView):
 class view_article_details(DetailView):
     model = Post
     template_name = 'article_details.html'
-
-# class view_add_comment(CreateView):
-#     model = Comment
-#     form_class = CommentForm
-#     template_name = 'add_comment.html'
-#     fields = '__all__'
-#     success_url = reverse('home')
