@@ -20,7 +20,7 @@
         {% for post in object_list %}
         <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
             <div class="card mb-5 shadow-sm">
-                {% if post.image %}
+                {% if post.image.url %}
                     <a href="{% url 'article-details' post.pk %}">
                         <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
                     </a>
