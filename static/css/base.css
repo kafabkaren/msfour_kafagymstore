@@ -178,6 +178,11 @@ body {
     text-decoration: none !important;
 }
 
+.add-post {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
 .navbar-nav li a:hover {
     color: #F7941E!important;
     font-weight: bold;

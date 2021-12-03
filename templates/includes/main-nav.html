@@ -45,8 +45,12 @@
                 <a href="{% url 'products' %}?category=all_in_one,supplements" class="dropdown-item">All New Offers</a>
             </div>           
         </li>
-        <li class="nav-item">
-            <a href="{% url 'view_blog' %}" class="new-offers logo-font font-weight-bold-nav-link dark-style mr-5 font-weight-bold">Our Blog</a>
+        <li class="nav-item dropdown">
+            <a href="{% url 'view_blog' %}" id="add_post" class="add-post logo-font font-weight-bold-nav-link dark-style mr-5 font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Our Blog
+            </a>
+            <div class="dropdown-menu dark-style boder-0" aria-labelledby="add_post-link">
+                <a href="{% url 'view_blog' %}" class="dropdown-item">Blog Home</a>        
         </li>
     </ul>
 </div>

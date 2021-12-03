@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Kafagym Store - {{ post.title }}{% endblock %}
+{% block title %}Kafagym Store - {{ post.title_tag }}{% endblock %}
 {% load static %}
 
 {% block page_header %}
@@ -24,17 +24,34 @@
                 </div>
                 <br>
                 <div class="text-justify">
-                    {{ post.content }}
+                    {{ post.body }}
                 </div>
                 <br/>
                 <hr>
                 <br/>
 
-                <form action="" method="POST">
+                <h4 class="text-orange">
+                    Comments
+                </h4>
+                {% if post.comments.all %}
+                    {% for comment in post.comments.all %}
+                        <strong>
+                            {{ comment.name }} - 
+                            {{ comment.date_created }}
+                        </strong>
+                        <br>
+                        {{ comment.body }}
+                    {% endfor %}
+                {% else %}
+                    This article has no comments yet.
+                {% endif %}
+                <br><br>
+                <hr>
+                <form method="POST">
                     {% csrf_token %}
-                    <h2 class="text-orange">
+                    <h4 class="text-orange">
                         Write your Comment
-                    </h2>
+                    </h4>
                     Comment Title:
                     <input type="text" class="form-control" name="subject_line" required>
                     <br>
