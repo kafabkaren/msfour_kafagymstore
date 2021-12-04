@@ -133,6 +133,7 @@ To satisfy the user's needs the features and functions below were implemented. A
     - Creating account with social media<br>
     - Product comparison options<br>
     - Payment in various currencies<br>
+    - I had initiated the blog app but it has failed to run in the deployed version on Heroku while it does on the gitpod. So I decided to disable its relevant link.
 </ul>
 
 ### Back-End<br>
@@ -141,9 +142,6 @@ Users have options to purchase products as guest users or account holder users. 
 SQLite, which is Django built-in database is used for development mode and Heroku Postgre is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
 
 Below is the chart of the database to show the data relationships.<br><br>
-
-### Database Structure<br>
-
 
 
 ## Surface Plane
@@ -164,13 +162,6 @@ Fontawesome icons were used for UX purposes to help the user's guidance to navig
 
 The design of this website layout relied mostly on the bootstrap library to ensure the convenience of both desktop  and mobile designs. The site is fully responsive with appropriate layout that match the images sizes to fit into the webpage layout. Thus, shoppers using a mobile phone have no difficulties looking for products and purchase them and be able navigate around the site. Below are the wireframes of the core pages of the website.
 
-### Wireframes
-
-The wireframes for the site were created with help of Balsamiq. They feature the site look from different angles i.e computer, mobile phone and tablet views.
-
-* Guess The Number Computer View Wireframe - [wireframe](https://github.com/kafamem/mstwo-guess-the-number/blob/master/docs/wireframes/MS2%20Computer%20View.jpg)
-* Guess The Number Mobile Phone View Wireframe - [wireframe](https://github.com/kafamem/mstwo-guess-the-number/blob/master/docs/wireframes/MS2%20Mobile%20Phone%20View.jpg)
-* Guess The Number Tablet View Wireframe - [wireframe](https://github.com/kafamem/mstwo-guess-the-number/blob/master/docs/wireframes/MS2%20Tablet%20View.jpg)
 
 # TECHNOLOGIES USED
 
