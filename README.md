@@ -7,7 +7,7 @@ Welcome to [Kafagym Store Platform](https://msfour-kafagymstore.herokuapp.com/)
 The Kafagym Store platform was built, designed and deployed by Fabrice Karenzi as his final milestone project at the [Code Institute](https://codeinstitute.net/se/) Full Stack Web Development diploma. The website is
 designed to provide customers at the Kafagym Store with the online options to puchase, rate and review the products made available to them from the store. It should be reminded that though it will turn into a viable e-commerce website for business at a later stage; it is serving for the purpose of education for the moment. It is a mobile responsive website.<br>
 
-![MS4 Responsiveness.JPG]()
+![MS4 Responsiveness.JPG](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/msfour-resonsiveness.jpg)
 
 # Target Audience of the website:
 <ul>
