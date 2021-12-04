@@ -227,11 +227,13 @@ The wireframes for the site were created with help of Balsamiq. They feature the
         - Users can rate and review the product. The general rating is calculated as an average of the ratings from different users.
         - Users can alse make reviews of each product.
     <li>To be able to see images and clear relevant content, so that I know what I am about to buy.</li>
+        - User can clear see the product image and its related information to be able to decide.
     <li>To view product details, know the price, see the image, size if any, description etc.</li>
         - The website has a clear purchase navigation with pop-up messages, which allow user to pass the purchase to checkout.
     <li>To know about new offers(e.g. free delivery cost upon purchasing products of not less that 500 SEK etc).</li>
+        - User is informed of new offers at the store through navigation link or delivery banner.
     <li>To view product details in my cart and confirm everything before purchase.</li>
-        - 
+        - User can visualize the purchase preview before confirmation of the order.
     <li>Add, update and delete products in my cart so I can take control of my purchase.</li>
         - As a user I can add/edit/delete products in my shopping cart
     <li>To feel comfortable providing my personal information(card details) through a secured payment system.</li>
@@ -239,6 +241,7 @@ The wireframes for the site were created with help of Balsamiq. They feature the
     <li>To ensure the products and cost as final check on checkout page.</li>
         - The shopping cart functionality ensures the manipulation of the products and makes it (edit/delete). When user update products in the cart, they can see the new total price simulitaniously.
     <li>To ensure my purchase has gone through, receive a confirmation notice and email</li>
+        - Upon submitting order, the user get a toast nofication indicating that the purchase has been successful. In case registered, they also get email notification.
     <li>To sign up and purchase products easier and see the order history.</li>
     <li>Add and update personal details.</li>
         - Every registered user will have a personal profile on their dashboard.
@@ -249,7 +252,7 @@ The wireframes for the site were created with help of Balsamiq. They feature the
 As a Store owner at The Kafagym Store website I expect/want/need:
 <ul>
     <li>To provide a simple design e-commerce website without difficulties to look at the products and purchase them.</li>
-        - 
+        - The website is easy to navigate. With clear navigation system.
     <li>To add new products to sell.</li>
         - Only superuser or admin will have access to product management options and can govern the content of the website. He will be able to edit/delete buttons, which regular users can't see.
     <li>To edit and update product.</li>
@@ -273,26 +276,6 @@ As a Store owner at The Kafagym Store website I expect/want/need:
 * [jshint](https://jshint.com/) for testing JavaScript code
 * [PEP8 Online](http://pep8online.com/) for checking Python code compliance
 * [Chrome DevTools](https://developer.chrome.com/docs/devtools/) for testing, style checking and debugging<br><br>
-
-
-
-## Compatibility Testing
-
-The site is compatible with different devices including mobile and tablet as well as computer. The responsiveness aspect was regularly checked using Google Chrome inspect features without forgetting Safari and Mozilla Firefox.
-
-### Testing User Stories from User Experience (UX)
-
-As a user and the plater at same time of the game on the website, I want to:
-<ul>
-    <li></li><br> 
-</ul>
-
-### Further Testing
-* 
-
-## Deployment
-
-
 
 # Credits
 

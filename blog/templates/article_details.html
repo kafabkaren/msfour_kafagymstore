@@ -20,7 +20,9 @@
                 <hr>
                 <br/>
                 <div class="article-img">
+                    {% if post.image.url %}
                         <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid active">
+                    {% endif %}
                 </div>
                 <br>
                 <div class="text-justify">
