@@ -96,7 +96,7 @@ To satisfy the user's needs the features and functions below were implemented. A
 
 ## Structure Plane
 
-### The Kafagym website features:<br>
+### Front-End<br>
 
 <ul>
     <li>NAVIGATION AREA</li>
@@ -109,6 +109,12 @@ To satisfy the user's needs the features and functions below were implemented. A
     <li>PRODUCTS PAGE</li>
     - Bootstrap was used for the product page and the page is made with Bootstarp grid system to adjust to responsive requirements depending on a screen size. It should also be noted that media queries were used for adequate adjustment with focus on mobile devices. Each product has an image, title, description, price, rating average and reviews, size (if any), quantity selector and add cart button.
     - Superuser (admin) can edit and delete products and content on the page.<br><br>
+    <li>PRODUCTS DETAILS</li>
+    - The pages where users can see product details, with an option to select criteria (e.g. size) and add it in the shopping cart.<br><br>
+    <li>CHECKOUT SUCCESS</li>
+    - The confirmation page where users are lead to when the payment process is completed. Users can see the order number, shipping address, product details. This page is accessible for registered users from Profile.<br><br>
+    <li>REGISTER</li>
+    - The page where users can create an account to save their details for next shopping and keep their purchase histories. A form with a built-in function is created with Django Allauth package.<br><br>
     <li>MY PROFILE</li>
     - My profile page renders a dashboard with the information related to specific user.
     <br> It also includes the dashboard shows the user information and the number of orders they so far placed.<br>
@@ -117,6 +123,8 @@ To satisfy the user's needs the features and functions below were implemented. A
     - There are two steps involved in this process:<br>
         - Cart which is getting all the user orders.<br>
         - Checkout which allows user to add their shipping details and make a secure payment via stripe.<br><br>
+    <li>ADMIN</li>
+    - The admin panel, which can be created with Django project, where Admin can take control of products and other data.<br><br>
     <li>FEATURES REMAINING TO IMPLEMENT</li>
     - Connecting to additional payment systems such as PayPal<br>
     - Adding a 24/7 service via chat<br>
@@ -127,10 +135,21 @@ To satisfy the user's needs the features and functions below were implemented. A
     - Payment in various currencies<br>
 </ul>
 
+### Back-End<br>
+
+Users have options to purchase products as guest users or account holder users. Guest users cannot save personal details for their next shopping as personal details such as name, email address, shipping address etc belong to their order in the database. Account holder users who create an account with their email address and username, user name (user profile) is linked with their order so that personal details can be retrieved. Each product belongs to a category, a brand and these are identified by id. Each order has a unique order number which is generated when the order is processed and orders have shopper's and product details.
+SQLite, which is Django built-in database is used for development mode and Heroku Postgre is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
+
+Below is the chart of the database to show the data relationships.<br><br>
+
 ## Surface Plane
 
-__ Colours__
-This is an e-commerce website that has a lot of products with images containing different colours, White (#FFFFFF) is used as the main background colour to keep the entire image of the website settled. The shop colour is Hunter Green (#09572A) and this is used for some icons and fonts. Jet (#333333) is used as the main font colour, Golden Yellow (#FFDF00) is used for buttons and alerts to stand them out. Flame (#E84610) is used for other things that need user's attention. These are the base colours and similar colours are used on the different parts and sections on the website.
+__ Colours __
+The overall colour scheme consists of a number of colours. Dark colour (#4B4D4F) was used in the navigation area and for text font. Orange (#F7941E) was mainly used for button styling and navigation links styling. It was also used for the footer. The general background colour was light grey (#EAEDED). White colour (#FFF) was used for links primarily before hovering effects. The boostrap text-success, text-warning, text-danger, and text-info were used for toasts messages. In some cases text-dark and text-muted styles were used for links. 
+
+__ Typography __
+
+The googel font 'Roboto' was used as the main text font throught the website while 'Sans Serif' was kept as backup font in case 'Roboto' fails to respond effectively. The two typographies were fetched from google fonts. I found 'Roboto' friendly for e-commerce design purpose.<br><br>
 
 # TECHNOLOGIES USED
 
