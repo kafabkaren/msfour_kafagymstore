@@ -144,67 +144,68 @@ Below is the chart of the database to show the data relationships.<br><br>
 
 ## Surface Plane
 
-__ Colours __
-The overall colour scheme consists of a number of colours. Dark colour (#4B4D4F) was used in the navigation area and for text font. Orange (#F7941E) was mainly used for button styling and navigation links styling. It was also used for the footer. The general background colour was light grey (#EAEDED). White colour (#FFF) was used for links primarily before hovering effects. The boostrap text-success, text-warning, text-danger, and text-info were used for toasts messages. In some cases text-dark and text-muted styles were used for links. 
+__ Colour Scheme __
+
+The overall colour scheme consists of a number of colours. Dark colour (#4B4D4F) was used in the navigation area and for text font. Orange (#F7941E) was mainly used for button styling and navigation links styling. It was also used for the footer. The general background colour was light grey (#EAEDED). White colour (#FFF) was used for links primarily before hovering effects. The boostrap text-success, text-warning, text-danger, and text-info were used for toasts messages. In some cases text-dark and text-muted styles were used for links.<br><br> 
 
 __ Typography __
 
 The googel font 'Roboto' was used as the main text font throught the website while 'Sans Serif' was kept as backup font in case 'Roboto' fails to respond effectively. The two typographies were fetched from google fonts. I found 'Roboto' friendly for e-commerce design purpose.<br><br>
 
+__ Icons __
+
+Fontawesome icons were used for UX purposes to help the user's guidance to navigate the website.<br>
+
 # TECHNOLOGIES USED
 
-### Languages Used
+### Languages Used:
 
-* HTML5
-* CSS3
-* JavaScript
-* Python
-    - Django
-    
-<ul>
-    <li>Languages Used:</li>
-    <ul>
-    <li>[HT](https://getbootstrap.com/docs/4.5/getting-started/introduction/)</li><br><br>
-    <li>Frameworks, Libraries & Programs Used:
-    1. [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/):
+* [HTML](https://www.w3schools.com/html/)
+* [CSS](https://www.w3schools.com/css/)
+* [JavaScript](https://www.w3schools.com/js/)
+* [Python](https://www.python.org/)
+    - [Django](https://www.djangoproject.com/)
+
+### Framewoks, Libraries & Programs Used:
+
+* [Bootstrap 4](https://getbootstrap.com/docs/4.5/getting-started/introduction/):
     - Bootstrap was used to ensure the responsiveness and styling of the website.
-
-    1. [Google Fonts](https://fonts.google.com/)
+* [Google Fonts](https://getbootstrap.com/docs/4.5/getting-started/introduction/):
     - Google fonts were used to import the 'Roboto and Sans-Serif' fonts used for typography.
-
-    1. [Git](https://git-scm.com/)
+* [Git](https://git-scm.com/):
     - For version control, Git was used mainly to commit with help of Gitpod terminal and Push to GitHub.
-    1. [GitHub](https://github.com/)
+* [GitHub](https://github.com/):
     - GitHub is used for storing the code pushed from Git.
-
-    1. [Balsamiq](https://balsamiq.com/)
-    - Balsamiq was used to create the website home page [wireframe](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/Landing%20page.png) during the design process.
-    1. [Befunky](https://www.befunky.com/create/resize-image/)
+* [Balsamiq](https://balsamiq.com/):
+    - Balsamiq was used to create the website home page
+* [Gitpod](https://gitpod.io/):
+    - Gitpod was used as a workspace in production mode of the project
+* [Befunky](https://www.befunky.com/create/resize-image/):
     - Befunky was such a handy website for picture editor used to resize images used in this project.
-    1. [ColorZilla](https://www.colorzilla.com/)
+* [ColorZilla](https://www.colorzilla.com/):
     - ColorZilla was such a handy extension used to pick the appropriate hexadecimal during the design process.
-    </li>
-</ul>
-    <li>Typography</li><br>
+* [Heroku](https://www.heroku.com/):
+    - Heroku was used a hosting for the project deployment.
+* [Stripe](https://stripe.com/en-se):
+    - secured payment system used in the project
+* [AWS](https://aws.amazon.com/?aws-products-analytics.sort-by=item.additionalFields.productNameLowercase&aws-products-analytics.sort-order=asc&aws-products-business-apps.sort-by=item.additionalFields.productNameLowercase&aws-products-business-apps.sort-order=asc&aws-products-containers.sort-by=item.additionalFields.productNameLowercase&aws-products-containers.sort-order=asc&aws-products-compute.sort-by=item.additionalFields.productNameLowercase&aws-products-compute.sort-order=asc&aws-products-databases.sort-by=item.additionalFields.productNameLowercase&aws-products-databases.sort-order=asc&aws-products-fe-mobile.sort-by=item.additionalFields.productNameLowercase&aws-products-fe-mobile.sort-order=asc&aws-products-game-tech.sort-by=item.additionalFields.productNameLowercase&aws-products-game-tech.sort-order=asc&aws-products-iot.sort-by=item.additionalFields.productNameLowercase&aws-products-iot.sort-order=asc&aws-products-ml.sort-by=item.additionalFields.productNameLowercase&aws-products-ml.sort-order=asc&aws-products-mgmt-govern.sort-by=item.additionalFields.productNameLowercase&aws-products-mgmt-govern.sort-order=asc&aws-products-migration.sort-by=item.additionalFields.productNameLowercase&aws-products-migration.sort-order=asc&aws-products-network.sort-by=item.additionalFields.productNameLowercase&aws-products-network.sort-order=asc&aws-products-security.sort-by=item.additionalFields.productNameLowercase&aws-products-security.sort-order=asc&aws-products-storage.sort-by=item.additionalFields.productNameLowercase&aws-products-storage.sort-order=asc):
+    - (Amazon Web Services) for hosting static files and images for the website
+* [Fontawesome](https://fontawesome.com/):
+    - for icons
 
+# RESOURCES
 
-    - The 'Press Start 2P' is the main font that was used while 'Sans Serif' was kept as backup font in case 'Press Start 2P' fails to respond effectively. The two typographies were fetched from google fonts. I found 'Press Start 2P' friendly for games design.<br><br>
-    <li>Emoji Icons</li><br>
-    - Five emoji icons were used in JavaScript code in order to accompany the user anticipated feelings upon guessing right or wrong in relation to the secret number and from the html 'Attempt' and 'Score' elements.<br>   
+## General Resources
+* Code Institute Course Materials
+* [Stack Overflow](https://stackoverflow.com/)
+* [Youtube](https://www.youtube.com/)
+* [W3Schools](https://www.w3schools.com/)
+* [Google](https://www.google.se/?hl=sv)
 
-</ul>
-
-### Design<br>
-The web design main target is to provide the user with the ability to interact with the game. The layout consists of features and elements that allows the user to navigate and use the interact with the game. 
-<ul>
-    <li>Colour Scheme</li><br>
-    - The dominating color throughout the entire layout is dark grey which is combined with light grey color used for header and the instruction card area. In order to make the text content stand out, I used the orange color for typography which created a harmonious combination for both text and buttons background color.<br><br>
-    <li>Typography</li><br>
-    - The 'Press Start 2P' is the main font that was used while 'Sans Serif' was kept as backup font in case 'Press Start 2P' fails to respond effectively. The two typographies were fetched from google fonts. I found 'Press Start 2P' friendly for games design.<br><br>
-    <li>Emoji Icons</li><br>
-    - Five emoji icons were used in JavaScript code in order to accompany the user anticipated feelings upon guessing right or wrong in relation to the secret number and from the html 'Attempt' and 'Score' elements.<br>   
-
-</ul>
+## General Resources
+* [jshint](https://jshint.com/) for testing JavaScript code
+* [PEP8 Online](http://pep8online.com/) for checking Python code compliance
+* [Chrome DevTools](https://developer.chrome.com/docs/devtools/) for testing, style checking and debugging<br><br>
 
 ### Wireframes
 
@@ -215,54 +216,7 @@ The wireframes for the site were created with help of Balsamiq. They feature the
 * Guess The Number Tablet View Wireframe - [wireframe](https://github.com/kafamem/mstwo-guess-the-number/blob/master/docs/wireframes/MS2%20Tablet%20View.jpg)
 
 
-## Features
 
-### Existing Features
-<ul>
-The site layout consists of three main areas:<br><br>
-    <li>The header that shows the name and the purpose of the site.</li><br>
-    <li>The game area which consits of secret number area where the hidden number is represented by the question mark. It is in this area where the guessed number shows up after a correct match. This styling in this regards also changes from 15rem for the initial and deafult settings to 30rem width after guessing right.<br>
-    <li>The input area serves for typing the number. The user can type in or scroll up and down to choose the number. Under this area, is the check button to submit the input for comparison and get the feedback. 
-    </li><br>
-    <li>The site also includes the 'Attempt' and 'Topscore' features. The Attempt feature which is a counting down from twenty down to zero, shows the user how many times they have tried to reach the perfect match. In case of failure i.e the last attempt equals to zero; then the 'You lost the game' message pops up. On the other hand, the Topscore feature keeps the highest score so far reached.</li><br>
-    <li>The 'Again' which is under the attempt and topscore features servers for starting the game session without losing track of the topscore. The game is to reset to the initial settings but keeping the topscore. However, upon refreshing the page the game will start from scratch.</li>
-    <li>The last area is the instruction which guide the user on how to play the game.</li>
-</ul>
-
-### Features Left to implement
-<ul>
-    <li>To better improve the game I plan to add on levels of difficulty where the user will be challenged to choose between easy and hard levels. To this level, the user may be provided with only a limited number of attempts to guess right with high score.</li><br>
-
-</ul>
-
-## Technologies used
-
-### Languages Used
-
-* HTML5
-* CSS3
-* JavaScript
-
-
-### Framework, Libraries, Websites & Tools Used
-
-1. [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/):
-    - Bootstrap was used to ensure the responsiveness and styling of the website.
-
-1. [Google Fonts](https://fonts.google.com/)
-    - Google fonts were used to import the 'Roboto and Sans-Serif' fonts used for typography.
-
-1. [Git](https://git-scm.com/)
-    - For version control, Git was used mainly to commit with help of Gitpod terminal and Push to GitHub.
-1. [GitHub](https://github.com/)
-    - GitHub is used for storing the code pushed from Git.
-
-1. [Balsamiq](https://balsamiq.com/)
-    - Balsamiq was used to create the website home page [wireframe](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/Landing%20page.png) during the design process.
-1. [Befunky](https://www.befunky.com/create/resize-image/)
-    - Befunky was such a handy website for picture editor used to resize images used in this project.
-1. [ColorZilla](https://www.colorzilla.com/)
-    - ColorZilla was such a handy extension used to pick the appropriate hexadecimal during the design process.
 
 ## Validation
 
@@ -301,6 +255,8 @@ As a user and the plater at same time of the game on the website, I want to:
 
 ## Deployment
 
+As this project is a back-end in nature, a number of technologies were used including server, application and database thus the website was deployed to Heroku; a cloud based platform that supports various programming languages. The Heroku Postgres was used for the database. For static files hosting, the cloud based platform Amazon AWS was resorted to store static files and images as Heroku has no files system to store new files.
+
 ### GitHub pages
 The following steps were followed to deploy the project to GitHub Pages:
 
@@ -316,14 +272,18 @@ In order to write wode, I use Gitpod IDE.
 1. After logging in to Gitpod, I choose the 'kafamem/mstwo-guess-the-number' workspace.
 1. Then, I select open from adjacent three dots. Then the workspace name opens the project design interface. This has terminals, coding area as well as the preview mode.
 
-## Credits
+# Credits
 
 ### code
 * [Bootstrap4](https://getbootstrap.com/docs/4.1/getting-started/introduction/): Bootstrap Library was used to ensure the responsiveness of the website.
+
+### Media
+* 10 images were fetched from [ShutterStock](https://www.shutterstock.com/sv/)
 
 ### content
 * All the text content was written by the developer.
 
 ### Acknowledgements
 * My mentor for his technical guidance.  
-* Tutor support at Code Institute their technical support.
+* Valuable tutoring support at Code Institute.
+* Valuable Slack community hints.
