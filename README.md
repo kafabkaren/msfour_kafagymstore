@@ -1,29 +1,179 @@
-# Guess The Number
+# KAFAGYM STORE
 
-Welcome to [Guess The Number](https://kafamem.github.io/mstwo-guess-the-number/)
-
-![MS2 Responsiveness.JPG](https://github.com/kafamem/mstwo-guess-the-number/blob/master/docs/images/MS2%20Responsiveness.JPG)
+Welcome to [Kafagym Store Platform](https://msfour-kafagymstore.herokuapp.com/)
 
 ## Project rationale
 
-This website is designed to help users play by guessing the hidden number. The game consists of guessing the hidden number by type in the guess one ranging between 1 and 20. Then, check if the input is correct.<br>
+The Kafagym Store platform was built, designed and deployed by Fabrice Karenzi as his final milestone project at the [Code Institute](https://codeinstitute.net/se/) Full Stack Web Development diploma. The website is
+designed to provide customers at the Kafagym Store with the online options to puchase, rate and review the products made available to them from the store. It should be reminded that though it will turn into a viable e-commerce website for business at a later stage; it is serving for the purpose of education for the moment. It is a mobile responsive website.<br>
 
+![MS4 Responsiveness.JPG]()
 
-# User Experience (UX)
-
-It has been designed in such way that its visitors will be able to navigate the 
-web features easily and with help of simple but clean colour combination and game typography. 
-
-## User stories<br>
+# Target Audience of the website:
 <ul>
-    <li>As a user, I want to be able to navigate the page easily.</li>
-    <li>As a user, I want to type in my guessing number.</li>
-    <li>As a user, I want to be able to check the correctness of the number I entered.</li>
-    <li>As a user, I want a feedback after checking my number.</li>
-    <li>As a user, I want to know how many attempts I still have remaining to score for each guess and see my top score.</li>
-    <li>As a user, I want to be able to start the game without losing my current top score.</li>
-    <li>As a user, I want to be able to restart the game from scratch.</li>
-</ul> 
+    <li>Sport lovers with interests in sport products</li>
+    <li>Customers who want to purchase sport products online</li>
+</ul>
+
+# Website Business Goals
+<ul>
+    <li>Increasing sales through online shopping of sport customers;</li>
+    <li>Increading sport market coverage through purchase and delivery;</li>
+    <li>Building Kafagym sport community via newsletter subscriptions;</li>
+    <li>Building trustworthy sport online shop;</li>
+</ul>
+
+## UX<br>
+## User stories<br>
+As a shopper at The Kafagym Store website I expect/want/need:
+<ul>
+    <li>To view products to purchase by group of categories(eg. clothes, shoes, weights) and be able to navigate through them.</li>
+    <li>Accessible information presented in clear and straight manner, so that I can find the product quickly.</li>
+    <li>The ability to search for products based on a number of criteria; rating, price; categories, and name.</li>
+    <li>To be able to read reviews and see ratings which can help me make a decision on product to buy.</li>
+    <li>To be able to see images and clear relevant content, so that I know what I am about to buy.</li>
+    <li>To view product details, know the price, see the image, size if any, description etc.</li>
+    <li>To know about new offers(e.g. free delivery cost upon purchasing products of not less that 500 SEK etc).</li>
+    <li>To view product details in my cart and confirm everything before purchase.</li>
+    <li>Add, update and delete products in my cart so I can take control of my purchase.</li>
+    <li>To feel comfortable providing my personal information(card details) through a secured payment system.</li>
+    <li>To ensure the products and cost as final check on checkout page.</li>
+    <li>To ensure my purchase has gone through, receive a confirmation notice and email</li>
+    <li>To sign up and purchase products easier and see the order history.</li>
+    <li>Add and update personal details.</li>
+    <li>Account password reset function in case I forget it.</li>
+</ul>
+
+As a Store owner at The Kafagym Store website I expect/want/need:
+<ul>
+    <li>To provide a simple design e-commerce website without difficulties to look at the products and purchase them.</li>
+    <li>To give to a user with of without account an option to checkout.</li>
+    <li>To add new products to sell.</li>
+    <li>To edit and update product.</li>
+    <li>To delete product.</li>
+    <li>To collect user email address for mailing about products, sales if any.</li>
+    <li>To secure the website.</li>
+</ul>
+
+## UX 5 PLANES
+
+## Strategy Plane
+
+In order to ensure the user's goals and stories, below are the functions and features that were used with their relevant assessment scale ranging from 1 (least) and 5 (most).
+
+| Feature       | Feasibility   | Importance  | 
+| ------------- | ------------- | ------------- |
+| Displaying products by group of categories  | 5 | 5 |
+| Displaying products by category  | 5  | 5  |
+| Viewing product details  | 5 | 5  |
+| Rating products  | 5 | 4  |
+| Reviewing products  | 4 | 4  |
+| Search Function  | 5  | 5  |
+| Sorting Function | 4  | 5  |
+| Modifying products in shopping cart  | 5 | 5  |
+| Checkout Function  | 5  | 5  |
+| Secure payment  | 5  | 5  |
+| Written confirmation after purchase  | 5 | 5  |
+| Updating personal details  | 3  | 5  |
+| Email subscription  | 5  | 5  |
+| Add, Edit, Remove products (Admin only)  | 3 | 5  |
+
+## Strategy Plane
+
+To satisfy the user's needs the features and functions below were implemented. As for the admin, CRUD (Create, Read, Update and Delete) functions are implemented on the website.
+<ul>
+    <li>Easy and simple design of the home page that ease the navigation without confusion. Clear grouping of products (Equipment, Outfit and New Offers) on the home page.</li>
+    <li>Product pages by the group of categories where users can view all the products belong to the group.</li>
+    <li>From the product details page uses can see all the product details. Users can also select options (e.g. Size if any) and add the product in the cart.</li>
+    <li>Provision of shopping cart page for users to see all their chosen products before purchase. From there too, users can change the quantity of the product or remove it.</li>
+    <li>Checkout page that allows users to provide shipping details and credit card details.</li>
+    <li>Checkout success page to let users get confirmation of purchase.</li>
+    <li>Register page where users can create an account to keep the shipping address saved and to view order histories.</li>
+    <li>Profile page where users can see the personal details and order histories.</li>
+    <li>Logout function that users can safely log out and return to home page.</li>
+    <li>Product Management pages (admin only) where admin can add, edit, and delete products.</li>
+</ul>
+
+## Structure Plane
+
+### The Kafagym website features:<br>
+
+<ul>
+    <li>NAVIGATION AREA</li>
+    - The navigation area encompasses five major parts. The first holding the logo (left), the second containing the search product area (in the middle), the third for the login functions (on the right), the fourth for the shopping cart on larger screens (on the right) and last which accomodates the navigation bar under all of the parts. On mobile devices, menu item list is placed at the top left cornder as a burger-button with a fall-back list.<br>
+    - The top navigation area is a fixed-top navigation area, for the ease of navigation.<br><br>
+    <li>HOME PAGE</li>
+    - Under the the navigation area consists of three sections, the Home page consists of Hello image section with a link to products. The second section consists of product categories and third which is area for four fontawesome icons to keep the customers in the loop of what to expect once at Kafagym.<br><br>
+    <li>FOOTER</li>
+    - The footer consists of Get To Know Us part, Contact Us, Products and Subscribe to Our Newsletters links. There are social media icons with hover effect and active links to the social media pages. For the moment, social media links leads their main pages as we have not yet set social accounts for the business. Also, is the copyright note at the very bottom of the page.<br><br>
+    <li>PRODUCTS PAGE</li>
+    - Bootstrap was used for the product page and the page is made with Bootstarp grid system to adjust to responsive requirements depending on a screen size. It should also be noted that media queries were used for adequate adjustment with focus on mobile devices. Each product has an image, title, description, price, rating average and reviews, size (if any), quantity selector and add cart button.
+    - Superuser (admin) can edit and delete products and content on the page.<br><br>
+    <li>MY PROFILE</li>
+    - My profile page renders a dashboard with the information related to specific user.
+    <br> It also includes the dashboard shows the user information and the number of orders they so far placed.<br>
+    - Superuser (admin) has privileges to add a new product to the store.<br><br>
+    <li>PAYMENT</li>
+    - There are two steps involved in this process:<br>
+        - Cart which is getting all the user orders.<br>
+        - Checkout which allows user to add their shipping details and make a secure payment via stripe.<br><br>
+    <li>FEATURES REMAINING TO IMPLEMENT</li>
+    - Connecting to additional payment systems such as PayPal<br>
+    - Adding a 24/7 service via chat<br>
+    - Displaying number of product images per product<br>
+    - Enlarging product image upon hovering<br>
+    - Creating account with social media<br>
+    - Product comparison options<br>
+    - Payment in various currencies<br>
+</ul>
+
+## Surface Plane
+
+__ Colours__
+This is an e-commerce website that has a lot of products with images containing different colours, White (#FFFFFF) is used as the main background colour to keep the entire image of the website settled. The shop colour is Hunter Green (#09572A) and this is used for some icons and fonts. Jet (#333333) is used as the main font colour, Golden Yellow (#FFDF00) is used for buttons and alerts to stand them out. Flame (#E84610) is used for other things that need user's attention. These are the base colours and similar colours are used on the different parts and sections on the website.
+
+# TECHNOLOGIES USED
+
+### Languages Used
+
+* HTML5
+* CSS3
+* JavaScript
+* Python
+    - Django
+    
+<ul>
+    <li>Languages Used:</li>
+    <ul>
+    <li>[HT](https://getbootstrap.com/docs/4.5/getting-started/introduction/)</li><br><br>
+    <li>Frameworks, Libraries & Programs Used:
+    1. [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/):
+    - Bootstrap was used to ensure the responsiveness and styling of the website.
+
+    1. [Google Fonts](https://fonts.google.com/)
+    - Google fonts were used to import the 'Roboto and Sans-Serif' fonts used for typography.
+
+    1. [Git](https://git-scm.com/)
+    - For version control, Git was used mainly to commit with help of Gitpod terminal and Push to GitHub.
+    1. [GitHub](https://github.com/)
+    - GitHub is used for storing the code pushed from Git.
+
+    1. [Balsamiq](https://balsamiq.com/)
+    - Balsamiq was used to create the website home page [wireframe](https://github.com/kafamem/msone-kafagym/blob/master/assets/images/Landing%20page.png) during the design process.
+    1. [Befunky](https://www.befunky.com/create/resize-image/)
+    - Befunky was such a handy website for picture editor used to resize images used in this project.
+    1. [ColorZilla](https://www.colorzilla.com/)
+    - ColorZilla was such a handy extension used to pick the appropriate hexadecimal during the design process.
+    </li>
+</ul>
+    <li>Typography</li><br>
+
+
+    - The 'Press Start 2P' is the main font that was used while 'Sans Serif' was kept as backup font in case 'Press Start 2P' fails to respond effectively. The two typographies were fetched from google fonts. I found 'Press Start 2P' friendly for games design.<br><br>
+    <li>Emoji Icons</li><br>
+    - Five emoji icons were used in JavaScript code in order to accompany the user anticipated feelings upon guessing right or wrong in relation to the secret number and from the html 'Attempt' and 'Score' elements.<br>   
+
+</ul>
 
 ### Design<br>
 The web design main target is to provide the user with the ability to interact with the game. The layout consists of features and elements that allows the user to navigate and use the interact with the game. 
