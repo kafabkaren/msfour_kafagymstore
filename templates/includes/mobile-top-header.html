@@ -11,7 +11,7 @@
             <div class="input-group w-100">
                 <input type="text" name="q" class="form-control border border-dark rounded-2" placeholder="Search Kafagym store...">
                 <div class="input-group-append">
-                    <button class="form-control btn btn-orange border border-dark rounded-2" type="submit">
+                    <button class="form-control btn-orange border border-dark rounded-2" type="submit">
                         <span class="icon">
                             <i class="fas fa-search"></i>
                         </span>
@@ -34,7 +34,7 @@
             {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
             {% endif %}        
-            <a href="#" class="dropdown-item">My Profile</a>
+            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
         {% else %}
             <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>

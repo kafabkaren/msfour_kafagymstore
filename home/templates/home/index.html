@@ -22,7 +22,7 @@
                     <h4 class="text-white text-uppercase"><small>this</small> <strong id="blackWeek" class="text-orange font-weight-bold text-uppercase black-week">black week!</strong></h4>
                         <div class="my-5">
                             <h3>
-                                <a href="{% url 'products' %}" class="see-products-btn btn-lg rounded-2 text-uppercase py-3">See Products</a>
+                                <a href="{% url 'products' %}" class="btn-see-products btn-sm rounded-2 text-uppercase py-3 btn-link">See Products</a>
                             </h3> 
                         </div>
                     </div>
@@ -35,13 +35,13 @@
     <section>
         <div class="container featured-categories category-title">
             <div class="mt-3">
-                <h2 class="title-orange text-center">Product Categories</h2>
+                <h2 class="product-categories title-orange text-center">Product Categories</h2>
             </div>
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
                     <div class="card mb-5 shadow-sm">
-                        <div class="card-title">
-                            <h4 class="text-center mt-3">Our Equipment</h4>
+                        <div>
+                            <h4 class="card-title text-center mt-3">Our Equipment</h4>
                         </div>
                         <img src="{% static 'media/hybrid_magnetic_elliptical_machine.jpg' %}" alt="Product Categories Treadmill" class="img-fluid">
                         <div class="card-body">
@@ -53,8 +53,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
                     <div class="card mb-5 shadow-sm">
-                        <div class="card-title">
-                            <h4 class="text-center mt-3">Outfit</h4>
+                        <div>
+                            <h4 class="card-title text-center mt-3">Outfit</h4>
                         </div>
                         <img src="{% static 'media/air-jordan.jpg' %}" alt="Product Categories Air Jordan" class="img-fluid">
                         <div class="card-body">
@@ -66,8 +66,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
                     <div class="card mb-5 shadow-sm">
-                        <div class="card-title">
-                            <h4 class="text-center mt-3">New Offers</h4>
+                        <div>
+                            <h4 class="card-title text-center mt-3">New Offers</h4>
                         </div>
                         <img src="{% static 'media/protein_powder.jpg' %}" alt="Product Categories supplements" class="img-fluid">
                         <div class="card-body">

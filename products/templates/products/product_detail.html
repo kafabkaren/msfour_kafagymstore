@@ -155,16 +155,18 @@
 
                                 <div class="col-12{% if s %} mt-2 {% endif %}">
                                     <a href="{% url 'products' %}" class="btn btn-orange shadow rounded-2 mt-5">
-                                        <span class="icon">
+                                        <span>
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
                                     {% if product.stock <= 0 %}
-                                        <h5 class="btn btn-out_of_stock rounded-2 shadow mt-5 ms-2 text-uppercase"><i class="fas fa-box-open"></i> Out of Stock</h5>
+                                        <h5 class="btn btn-out_of_stock rounded-2 shadow mt-5 text-uppercase"><i class="fa fa-box-open"></i>Out of Stock</h5>
                                     {% else %}
                                         <button type="submit" class="btn btn-orange rounded-2 shadow mt-5 ms-2">
-                                            <i class="fa fa-shopping-cart"></i>
+                                            <span>
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </span>
                                             <span class="text-uppercase">Add to Cart</span>
                                         </button>
                                     {% endif %}
@@ -224,7 +226,7 @@
                     <!-- Area for review & rating stars -->
                     <div class="section-heading">
                         <header>
-                            <h3 class="text-orange">Customer Reviews</h3>
+                            <h3 class="title-orange text-orange">Customer Reviews</h3>
                             <div class="rating-star">
                                 <span>
                                     <i class="fa fa-star{% if product.averageReview < 0.5 %}-o {% elif product.averageReview >= 0.5 and product.averageReview < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
