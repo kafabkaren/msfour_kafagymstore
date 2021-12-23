@@ -1,0 +1,8 @@
+<h6 class="text-dark"><b>Cart Total: {{ total|floatformat:2 }} SEK</b></h6>
+<h6 class="text-dark"><b>Delivery: {{ delivery|floatformat:2 }} SEK</b></h6>
+<h4 class="mt-4 dark-style"><b>Grand Total: {{ grand_total|floatformat:2 }} SEK</b></h4>
+{% if free_delivery_delta > 0 %}
+    <p class="mb-1 dark-style text-info">
+    You can get a free protein shake bottle by spending just <b>{{ free_delivery_delta }} SEK</b> more!
+    </p>
+{% endif %}

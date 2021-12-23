@@ -663,8 +663,6 @@ input[name='q']::placeholder {
         margin-top: 80px;
         max-width: 100%;
         min-height: 80vh;
-
-        /* height: calc(100vh - 140px); */
     }
 
     #showcase h1 {
@@ -770,5 +768,18 @@ input[name='q']::placeholder {
 
     .card-title {
         font-size: 1.2rem;
+    }
+
+    .shopping-cart {
+        margin-top: 5rem;
+    }
+
+    .dark-style {
+        font-size: 1rem;
+    }
+
+    .checkout-buttons {
+        size: 1rem !important;
+        gap: 5rem !important;
     }
 }
