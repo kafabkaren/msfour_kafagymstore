@@ -774,6 +774,18 @@ input[name='q']::placeholder {
         margin-top: 5rem;
     }
 
+    .checkout {
+        margin-top: 5rem;
+    }
+
+    .profile {
+        margin-top: 5rem;
+    }
+
+    .product-management {
+        margin-top: 5rem;
+    }
+
     .dark-style {
         font-size: 1rem;
     }
