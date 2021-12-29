@@ -19,7 +19,7 @@
             <a href="#" id="equipment" class="equipment logo-font font-weight-bold-nav-link dark-style mr-5 font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Equipment
             </a>
-            <div class="dropdown-menu dark-style boder-0" aria-labelledby="equipment-link">
+            <div class="dropdown-menu dark-style border-0" aria-labelledby="equipment-link">
                 <a href="{% url 'products' %}?category=exercise_machines" class="dropdown-item">Exercise Machines</a>
                 <a href="{% url 'products' %}?category=weights" class="dropdown-item">Weights</a>
                 <a href="{% url 'products' %}?category=exercise_machines,weights" class="dropdown-item">All Equipment</a>
@@ -29,7 +29,7 @@
             <a href="#" id="equipment" class="outfit logo-font font-weight-bold-nav-link dark-style mr-5 font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Outfit
             </a>
-            <div class="dropdown-menu dark-style boder-0" aria-labelledby="equipment-link">
+            <div class="dropdown-menu dark-style border-0" aria-labelledby="equipment-link">
                 <a href="{% url 'products' %}?category=shoes" class="dropdown-item">Shoes</a>
                 <a href="{% url 'products' %}?category=sport_clothes" class="dropdown-item">Sport Clothes</a>
                 <a href="{% url 'products' %}?category=shoes,sport_clothes" class="dropdown-item">All Outfits</a>
@@ -39,10 +39,18 @@
             <a href="#" id="equipment" class="new-offers logo-font font-weight-bold-nav-link dark-style mr-5 font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 New Offers
             </a>
-            <div class="dropdown-menu dark-style boder-0" aria-labelledby="equipment-link">
+            <div class="dropdown-menu dark-style border-0" aria-labelledby="equipment-link">
                 <a href="{% url 'products' %}?category=all_in_one" class="dropdown-item">All-In-One</a>
                 <a href="{% url 'products' %}?category=supplements" class="dropdown-item">Supplements</a>
                 <a href="{% url 'products' %}?category=all_in_one,supplements" class="dropdown-item">All New Offers</a>
+            </div>           
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="blog logo-font font-weight-bold-nav-link dark-style mr-5 font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Our Blog
+            </a>
+            <div class="dropdown-menu dark-style border-0" aria-labelledby="equipment-link">
+                <a href="{% url 'view_blog' %}" class="dropdown-item">Posts</a>
             </div>           
         </li>
     </ul>

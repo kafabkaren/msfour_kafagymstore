@@ -13,23 +13,26 @@
 {% block content %}
 <div class="container">
     <div class="text-center text-orange my-5">
-        <h3>Blog Posts</h3>
+        <h3 class="blog-post-title">Blog Posts</h3>
         <hr/>
     </div>
     <div class="row">
         {% for post in object_list %}
         <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
             <div class="card mb-5 shadow-sm">
+                <div>
                 {% if post.image.url %}
                     <a href="{% url 'article-details' post.pk %}">
-                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-img">
                     </a>
                 {% endif %}
+                </div>
+                
                 <div class="card-body">
                     <div class="card-title">
-                        <h2>
+                        <h5>
                             {{ post.title }}
-                        </h2>
+                        </h5>
                     </div>
                     <div class="card-text">
                         <div class="blog-date">
@@ -46,6 +49,7 @@
             </div>
             
         </div>
+        
         {% endfor %}
     </div>
 </div>

@@ -14,12 +14,12 @@
     <div class="container">
         <div class="row">
             <div class="col text-left mt-5">
-                <h1 class="text-orange">{{ post.title }}</h1>
+                <h3 class="blog-article-title">{{ post.title }}</h3>
                 <small>Written by: {{ post.author.first_name }} {{ post.author.last_name }}</small><br/>
                 <small>Created Date: {{ post.date_created }}</small><br/>
                 <hr>
                 <br/>
-                <div class="article-img">
+                <div class="image-container">
                     {% if post.image.url %}
                         <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid active">
                     {% endif %}
@@ -49,23 +49,25 @@
                 {% endif %}
                 <br><br>
                 <hr>
-                <form method="POST">
-                    {% csrf_token %}
-                    <h4 class="text-orange">
-                        Write your Comment
-                    </h4>
-                    Comment Title:
-                    <input type="text" class="form-control" name="subject_line" required>
-                    <br>
-                    Comment:
-                    <textarea class="form-control" name="Comment" rows="4" ></textarea>
-                    <br>
-                    {% if user.is_authenticated %}
-                        <input class="btn btn-orange" type="submit" value="Submit Comment">
-                    {% else %}
-                        <p>Make sure you are signed in to be able to comment. <span><a href="{% url 'account_login' %}" class="text-orange">Sign in</a> now</span></p>
-                    {% endif %}
-                </form>
+                <div class="col-md-9">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <h4 class="text-orange">
+                            Write your Comment
+                        </h4>
+                        Comment Title:
+                        <input type="text" class="form-control" name="subject_line" required>
+                        <br>
+                        Comment:
+                        <textarea class="form-control" name="Comment" rows="4"></textarea>
+                        <br>
+                        {% if user.is_authenticated %}
+                            <input class="btn btn-orange" type="submit" value="Submit Comment">
+                        {% else %}
+                            <p>Make sure you are signed in to be able to comment. <span><a href="{% url 'account_login' %}" class="text-orange">Sign in</a> now</span></p>
+                        {% endif %}
+                    </form>
+                </div>
                     <br><br>
 
                 <a href="{% url 'view_blog' %}" class="btn btn-orange text-uppercase">Home Blog</a>
