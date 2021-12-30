@@ -32,6 +32,32 @@
                 <hr>
                 <br/>
 
+                <div class="col-md-9">
+                    <!-- Comment Form -->
+                    <form method="POST">
+                        {% csrf_token %}
+                        <h4 class="text-orange">
+                            Write your Comment
+                        </h4>
+                        <div>
+                            Comment Title:
+                            <input type="text" class="form-control" name="subject" required>
+                            <br>
+                            Comment:
+                            <textarea class="form-control" name="Comment" rows="4" required></textarea>
+                            <br>
+                            {% if user.is_authenticated %}
+                                <input class="btn btn-orange" type="submit" value="Submit Comment">
+                            {% else %}
+                                <p>Make sure you are signed in to be able to comment. <span><a href="{% url 'account_login' %}" class="text-orange">Sign in</a> now</span></p>
+                            {% endif %}
+                        </div>
+                    </form>
+                    <!-- /.comment form -->
+
+                </div>
+                <br><br>
+
                 <h4 class="text-orange">
                     Comments
                 </h4>
@@ -49,26 +75,7 @@
                 {% endif %}
                 <br><br>
                 <hr>
-                <div class="col-md-9">
-                    <form method="POST">
-                        {% csrf_token %}
-                        <h4 class="text-orange">
-                            Write your Comment
-                        </h4>
-                        Comment Title:
-                        <input type="text" class="form-control" name="subject_line" required>
-                        <br>
-                        Comment:
-                        <textarea class="form-control" name="Comment" rows="4"></textarea>
-                        <br>
-                        {% if user.is_authenticated %}
-                            <input class="btn btn-orange" type="submit" value="Submit Comment">
-                        {% else %}
-                            <p>Make sure you are signed in to be able to comment. <span><a href="{% url 'account_login' %}" class="text-orange">Sign in</a> now</span></p>
-                        {% endif %}
-                    </form>
-                </div>
-                    <br><br>
+                
 
                 <a href="{% url 'view_blog' %}" class="btn btn-orange text-uppercase">Home Blog</a>
             </div>

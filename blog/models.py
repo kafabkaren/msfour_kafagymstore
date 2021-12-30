@@ -22,9 +22,12 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, related_name="Comments", on_delete=models.CASCADE)
-    name = models.CharField(max_length=200)
-    body = models.TextField()
-    date_created = models.DateTimeField(auto_now_add=True)
-
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    subject = models.CharField(max_length=100, blank=True)
+    comment = models.TextField(max_length=500, blank=True)
+    status = models.BooleanField(default=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now_add=True)
+    
     def __str__(self):
-        return '%s - %s' % (self.post.title, self.name)
+        return self.subject
