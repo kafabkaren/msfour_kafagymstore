@@ -575,10 +575,6 @@ input[name='q']::placeholder {
     .container {
         max-width: 80%;
     }
-
-    .image-container {
-        margin-top: 2rem;
-    }
 }
 
 /* Slightly larger container on medium and up */
