@@ -577,7 +577,7 @@ input[name='q']::placeholder {
     }
 
     .image-container {
-        width: auto;
+        margin-top: 2rem;
     }
 }
 
