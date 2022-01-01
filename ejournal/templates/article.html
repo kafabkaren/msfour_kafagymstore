@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Kafagym Store - eJournal Articles{% endblock %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+<br><br>
+{% block content %}
+<div class="container">
+    <div class="text-center text-orange my-5">
+        <h3 class="ejournal-article-title">eJournal Articles</h3>
+        <hr/>
+    </div>
+    <div class="row">
+        {% for article in object_list %}
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
+            <div class="card mb-5 shadow-sm">
+                <div>
+                {% if article.image.url %}
+                    <a href="{% url 'article-details' article.pk %}">
+                        <img src="{{ article.image.url }}" alt="{{ article.title }}" class="article-img">
+                    </a>
+                {% endif %}
+                </div>
+                
+                <div class="card-body">
+                    <div class="card-title">
+                        <h5>
+                            {{ article.title }}
+                        </h5>
+                    </div>
+                    <div class="card-text">
+                        <div class="blog-date">
+                                <p class="card-text"><small class="text-muted">By: {{ article.author.first_name }} {{ article.author.last_name }} - {{ article.author.email }}</small></p>
+                                <p class="card-text"><small class="text-muted">Posted on: {{ article.date_created }}</small></p>
+                        </div>
+                        <br>
+                            <p class="text-justify">{{ article.content|truncatechars:120 }}</p>
+                        <div class="blog-read-more text-center mb-2">
+                            <a href="{% url 'article-details' article.pk %}" class="btn btn-orange">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

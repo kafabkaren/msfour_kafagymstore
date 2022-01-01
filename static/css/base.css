@@ -178,7 +178,7 @@ body {
     text-decoration: none !important;
 }
 
-.blog {
+.ejournal {
     color: #FFFFFF !important;
     text-decoration: none !important;
 }
@@ -198,7 +198,7 @@ body {
 .equipment::before,
 .outfit::before,
 .new-offers::before,
-.blog::before {
+.ejournal::before {
     content: '|';
     padding-right: 10px;
 }
@@ -513,7 +513,7 @@ input[name='q']::placeholder {
     border-color: #F7941E;
 }
 
-/* Blog styling */
+/* Ejournal styling */
 
 .article-img {
     width: 380px;
@@ -548,7 +548,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-.post-img {
+.article-img {
     width: 100%;
 }
 
@@ -666,11 +666,11 @@ input[name='q']::placeholder {
         width: 50%;
     }
 
-    .blog-post-title {
+    .ejournal-article-title {
         margin-top: 8rem;
     }
 
-    .blog-article-title {
+    .ejournal-article-title {
         margin-top: 5rem;
     }
 }
@@ -806,11 +806,11 @@ input[name='q']::placeholder {
         margin-top: 5rem;
     }
 
-    .blog-post-title {
+    .ejournal-article-title {
         margin-top: 6rem;
     }
 
-    .blog-article-title {
+    .ejournal-article-title {
         margin-top: 3rem;
     }
     .dark-style {
