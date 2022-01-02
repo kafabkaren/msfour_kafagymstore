@@ -5,11 +5,14 @@ from django.urls import reverse
 
 class Article(models.Model):
     title = models.CharField(max_length=200)
-    title_tag = models.CharField(max_length=200, default='Article Title')
+    title_tag = models.CharField(max_length=200)
     author = models.ForeignKey(to=User, on_delete=models.CASCADE)
     body = models.TextField()
     
     def __str__(self):
         return self.title + ' | ' + str(self.author)
+
+    def get_absolute_url(self):
+        return reverse('ejournal_article_details', args=(str(self.id)))
 
 
