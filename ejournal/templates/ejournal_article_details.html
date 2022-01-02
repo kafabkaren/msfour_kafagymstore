@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Kafagym Store - {{ article.title_tag }}{% endblock %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col text-left mt-5">
+                <h3 class="ejournal-article-title">{{ article.title }}</h3>
+                <small>Written by: {{ article.author.first_name }} {{ article.author.last_name }}</small><br/>
+                <small>Created On: </small><br/>
+                <hr>
+                <br/>
+                <div class="image-container">
+                    {% if article.image.url %}
+                        <img src="{{ article.image.url }}" alt="{{ article.title }}" class="card-img-top img-fluid active">
+                    {% endif %}
+                </div>
+                <br>
+                <div class="text-justify">
+                    {{ article.body }}
+                </div>
+                <br/>
+                <hr>
+                <br/>
+                
+                <a href="{% url 'view_article' %}" class="btn btn-orange text-uppercase">Back To News</a>
+            </div>
+        </div>
+    </div>
+    <br/>
+
+{% endblock %}

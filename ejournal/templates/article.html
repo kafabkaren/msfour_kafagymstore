@@ -13,7 +13,7 @@
 {% block content %}
 <div class="container">
     <div class="text-center text-orange my-5">
-        <h3 class="ejournal-article-title">eJournal Articles</h3>
+        <h3 class="article-title">eJournal Articles</h3>
         <hr/>
     </div>
     <div class="row">
@@ -22,7 +22,7 @@
             <div class="card mb-5 shadow-sm">
                 <div>
                 {% if article.image.url %}
-                    <a href="{% url 'article-details' article.pk %}">
+                    <a href="{% url 'ejournal_article_details' article.pk %}">
                         <img src="{{ article.image.url }}" alt="{{ article.title }}" class="article-img">
                     </a>
                 {% endif %}
@@ -35,14 +35,14 @@
                         </h5>
                     </div>
                     <div class="card-text">
-                        <div class="blog-date">
+                        <div class="article-date">
                                 <p class="card-text"><small class="text-muted">By: {{ article.author.first_name }} {{ article.author.last_name }} - {{ article.author.email }}</small></p>
-                                <p class="card-text"><small class="text-muted">Posted on: {{ article.date_created }}</small></p>
+                                <p class="card-text"><small class="text-muted">Posted on: {{ article.created_on }}</small></p>
                         </div>
                         <br>
-                            <p class="text-justify">{{ article.content|truncatechars:120 }}</p>
-                        <div class="blog-read-more text-center mb-2">
-                            <a href="{% url 'article-details' article.pk %}" class="btn btn-orange">Read More...</a>
+                            <p class="text-justify">{{ article.body|truncatechars:80 }}</p>
+                        <div class="text-center mb-2">
+                            <a href="{% url 'ejournal_article_details' article.pk %}" class="btn btn-orange">Read More...</a>
                         </div>
                     </div>
                 </div>

@@ -666,12 +666,12 @@ input[name='q']::placeholder {
         width: 50%;
     }
 
-    .ejournal-article-title {
-        margin-top: 8rem;
+    .article-title {
+        margin-top:7rem;
     }
 
     .ejournal-article-title {
-        margin-top: 5rem;
+        margin-top: 3rem;
     }
 }
 
@@ -806,13 +806,14 @@ input[name='q']::placeholder {
         margin-top: 5rem;
     }
 
-    .ejournal-article-title {
+    .article-title {
         margin-top: 6rem;
     }
 
     .ejournal-article-title {
         margin-top: 3rem;
     }
+
     .dark-style {
         font-size: 1rem;
     }

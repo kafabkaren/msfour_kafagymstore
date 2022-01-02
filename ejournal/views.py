@@ -8,5 +8,6 @@ class view_article(ListView):
     template_name = 'article.html'
 
 
-
-
+class view_ejournal_article_details(DetailView):
+    model = Article
+    template_name = 'ejournal_article_details.html'
