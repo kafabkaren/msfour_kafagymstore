@@ -23,7 +23,11 @@
             <form method="POST" class="mb-2">
                 {% csrf_token %}
                 <div class="text-left">
-                    <button class="btn text-center btn-orange rounded-2" type="submit">Delete Article!</button>
+                    {% if user.is_authenticated %}
+                        <button class="btn text-center btn-orange rounded-2" type="submit">Delete Article!</button>
+                    {% else %}
+                        <p>Make sure you are signed in to add an article. <span><a href="{% url 'account_login' %}" class="text-orange">Sign in</a> now</span></p>
+                    {% endif %}
                 </div>
             </form>
         </div>
