@@ -819,7 +819,7 @@ input[name='q']::placeholder {
     }
 
     .checkout-buttons {
-        size: 1rem !important;
+       
         gap: 5rem !important;
     }
 

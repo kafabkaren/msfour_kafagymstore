@@ -162,6 +162,12 @@ Fontawesome icons were used for UX purposes to help the user's guidance to navig
 
 The design of this website layout relied mostly on the bootstrap library to ensure the convenience of both desktop  and mobile designs. The site is fully responsive with appropriate layout that match the images sizes to fit into the webpage layout. Thus, shoppers using a mobile phone have no difficulties looking for products and purchase them and be able navigate around the site. Below are the wireframes of the core pages of the website.
 
+* [HTML](https://www.w3schools.com/html/)
+* [CSS](https://www.w3schools.com/css/)
+* [JavaScript](https://www.w3schools.com/js/)
+* [Python](https://www.python.org/)
+    - [Django](https://www.djangoproject.com/)
+
 
 # TECHNOLOGIES USED
 
@@ -254,8 +260,81 @@ As a Store owner at The Kafagym Store website I expect/want/need:
         - Superuser will ensure the security of the website.
 </ul>
 
-# RESOURCES
+# VERSION CONTROL
+GitHub as a remote repository was used throught the entire project to keep track of code version control, and below is how they are used as the version control for the project.
 
+__ Setting Up __
+
+
+* Create a remote repository in GitHub by clicking "New repository" on the main page
+* I used Code Institute Template and chose a repository name and click Create Repository making sure that public option was selected.
+* Open the repository with Gitpod as Integrated Development Environment (IDE). The Code Institue Template, comes with initial commit that we do not need to do git init command when open IDE. It alse includes gitignore file to keep some confidential information. I had to include files such as pycache, *.sqlite3, env.py etc
+
+__ Setting Up __
+
+* Regular git commits were used after a set of work code was added. It was added, staged and pushed to GitHub to make sure I keep the history of the code modification. The following commands were used in this regards:
+
+```python
+* git status | To check the status of new/modified folders, files, and documents
+
+* git add . | To put all new and updated work on the stage in git
+  git add <specific file> is used when different types of work are done but do not want to commit everything on the same commitment
+* git commit -m "commit message" | To commit the work on the stage in git before pushing it to GitHub
+* git push | To update the repository in GitHub for main / master branch
+
+```
+
+
+# DEPLOYMENT
+
+The cloud based platform Heroku was used to host the website project. It provides backend hosting tech services such as server, application, and database (Heroku Postgres) and programming languages. In addition, the Amazon AWS (a cloud based platform) services were also resorted to host the static files and images since Heroku does not accomodate files for storage.
+
+Below are the processes of deploying the website to Heroku and setting up static files & images in AWS.
+
+__ HEROKU __
+
+* Create an app in Heroku. Click New, put App name and select region
+* Add Heroku Postgres for the database
+* Install dj_database_url and psycopg2-binary to use Heroku Postgres, and run pip3 freeze > requirements.txt command to add them on requirments.txt
+* Update settings.py of the product. Import dj_database_url, comment out sqlite databases and add dj databases variable temporary while the database is transferred to Heroku Postgres
+* Run python3 manage.py showmigrations command to see the status of migrations (Currently not migrated). Run python3 manage.py migrate command to migrate
+* Import all products data. Run python3 manage.py loaddata command to load the categories first, brands next and products the last. The order of loading is important as all the products are associated with categories and brands
+* Create a super user with python3 manage.py createsuperuser command for product admin
+* Install gunicorn which acts as the webserver, and freeze it into requirements file with pip3 freeze > requirements.txt command
+* Create a Procfile which specifies the commands that are executed by the app on startup
+* Temporary disable collectstatic by setting heroku config:set DISABLE_COLLECTSTATIC = 1 and host name of Heroku to allowed hosts in settings.py
+* Initialise Heroku in git with heroku: git:remote -a msfour-kafagym and put git into Heroku with git push heroku master
+* Set up automatic deployment when git is pushed to GitHub. Go to Deployment on Heroku, search the GitHub repository, connect and click Enable Automatic Deploys
+* Generate a new secret key, set it up in Heroku and update settings.py. Change the setting of Debug mode that only True in Development mode
+* Check Activity Feed to see Build in Progress to confirm automatic deployment is working
+
+
+__ AWS __
+
+* Open S3 and create a new bucket, which stores the files, by completing the name and region
+* Set up basic settings. Enable static website hosting so that it gives a new endpoint for accessing from the internet. Put index.html and error.html as default values
+* Set up CORS configuration which is the access between Heroku and this S3 Bucket
+* Set up Bucket Policy. Generate a policy with AWS policy generator. Add /* at the end of Resource to allow access to all resources in the bucket
+* Create a user to access the bucket. Go to IAM (Identity and Access Management) and create a group for the user to live in. Then, create a policy by importing pre-built policy
+* Attach the policy to the group
+* Create a user and add it to the group. When the user is added to the group, it creates csv file containing Access Key ID and Secret access key which are used to authenticate them from Django app. *It is very important to download the file and save it as you cannot download it again
+
+__ CONNECTING TO DJANGO __
+
+* Install two new packages, pip3 install boto3, pip3 install django-storages, and run pip3 freeze > requirements.txt command to add them on requirments.txt
+* Update settings.py to tell Django which bucket it should be communicating with *It is very important to keep AWS access keys secrets as these can be used to store or move data in the bucket and you will be charged by Amazon for it
+* Add these secret keys on Heroku and set USE_AWS = True
+* Create custome_storages.py to tell Django to use S3 to store static files and upload images when it is in production
+* Add AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com' to tell Django where the static files come from in production and add some settings for Static and Media files on settings.py
+* Add all the updates in git, commit it and push it to GitHub. Heroku runs python3 manage.py to collectstatic during the process which also searches through all the apps and project folders looking for static files. Then, it uses S3 domain settings in conjunction with the custom storage classes that tell the location at the URL where the things should be saved when it is in production. This can be confirmed in S3 bucket
+* Add Cache control on settings.py as static files do not change often and to improve the performance for users
+* Upload product images via S3. Create a folder, and upload images
+* Verify superuser's email address on Heroku Postgres. Login admin and check the VERIFIED and PRIMARY boxes
+* Add Stripe keys to Heroku Config Vars and create a new webhook endpoint
+* Create Gmail account, add email host pass & user to Heroku Config Vars and add code on settings.py of the product
+
+
+# RESOURCES
 ## General Resources
 * Code Institute Course Materials
 * [Stack Overflow](https://stackoverflow.com/)
