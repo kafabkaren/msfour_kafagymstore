@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = True
+
 
 
 ALLOWED_HOSTS = ['msfour-kafagymstore.herokuapp.com', 'localhost']
@@ -187,7 +187,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'msfour-kafagymstore'
     AWS_S3_REGION_NAME = 'eu-north-1'
@@ -204,7 +204,6 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-    
 
 
 # Stripe

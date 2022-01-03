@@ -148,8 +148,8 @@ SQLite, which is Django built-in database is used for development mode and Herok
 
 Below is the chart of the database to show the data relationships.<br><br>
 
-* [Homepage](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Homepage.jpg)
-* [Products](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Products.jpg)
+* [Database Digram](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Database_Relational_Diagram.jpg)
+* [Kafagym store flowchart](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Kafagym_store%20Flowchart.jpg)
 
 
 ## Surface Plane
