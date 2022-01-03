@@ -15,16 +15,15 @@
         <div class="row">
             <div class="col text-left mt-5">
                 <h3 class="ejournal-article-title">{{ article.title }}</h3>
+                <small class="text-left">
+                    <a href="{% url 'update_article' article.pk %}">Edit</a> |
+                    <a href="{% url 'delete_article' article.pk %}" class="text-danger">Delete</a>
+                </small>
+                <br>
                 <small>Written by: {{ article.author.first_name }} {{ article.author.last_name }}</small><br/>
-                <small>Created On: </small><br/>
+                <small>Created On: {{ article.created_on }}</small><br/>
                 <hr>
                 <br/>
-                <div class="image-container">
-                    {% if article.image.url %}
-                        <img src="{{ article.image.url }}" alt="{{ article.title }}" class="card-img-top img-fluid active">
-                    {% endif %}
-                </div>
-                <br>
                 <div class="text-justify">
                     {{ article.body }}
                 </div>

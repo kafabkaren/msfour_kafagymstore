@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Kafagym Store - eJournal Articles{% endblock %}
+{% block title %}Kafagym Store - News Articles{% endblock %}
 {% load static %}
 
 {% block page_header %}
@@ -19,20 +19,16 @@
     <div class="row">
         {% for article in object_list %}
         <div class="col-lg-4 col-md-6 col-sm-12 mb-2">
-            <div class="card mb-5 shadow-sm">
-                <div>
-                {% if article.image.url %}
-                    <a href="{% url 'ejournal_article_details' article.pk %}">
-                        <img src="{{ article.image.url }}" alt="{{ article.title }}" class="article-img">
-                    </a>
-                {% endif %}
-                </div>
-                
+            <div class="card mb-5 shadow-sm">                
                 <div class="card-body">
                     <div class="card-title">
                         <h5>
                             {{ article.title }}
                         </h5>
+                        <small class="text-left">
+                            <a href="{% url 'update_article' article.pk %}">Edit</a> |
+                            <a href="{% url 'delete_article' article.pk %}" class="text-danger">Delete</a>
+                        </small>
                     </div>
                     <div class="card-text">
                         <div class="article-date">
