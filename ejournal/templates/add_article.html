@@ -23,7 +23,11 @@
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div class="text-left">
-                    <button class="btn btn-orange rounded-2" type="submit">Add Article</button>
+                    {% if user.is_authenticated %}
+                        <button class="btn btn-orange rounded-2" type="submit">Add Article</button>
+                    {% else %}
+                        <p>Make sure you are signed in to add an article. <span><a href="{% url 'account_login' %}" class="text-orange">Sign in</a> now</span></p>
+                    {% endif %}
                 </div>
             </form>
         </div>
