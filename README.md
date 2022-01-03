@@ -77,6 +77,7 @@ In order to ensure the user's goals and stories, below are the functions and fea
 | Updating personal details  | 3  | 5  |
 | Email subscription  | 5  | 5  |
 | Add, Edit, Remove products (Admin only)  | 3 | 5  |
+| Add, Edit, Remove Article (Registered Users)  | 3 | 5  |
 
 ## Strategy Plane
 
@@ -122,12 +123,16 @@ To satisfy the user's needs the features and functions below were implemented. A
     <li>PAYMENT</li>
     - There are two steps involved in this process:<br>
         - Cart which is getting all the user orders.<br>
-        - Checkout which allows user to add their shipping details and make a secure payment via stripe.<br><br>
+        - Checkout which allows user to add their shipping details and make a secure payment via stripe .<br><br>
     <li>ADMIN</li>
     - The admin panel, which can be created with Django project, where Admin can take control of products and other data.<br><br>
     <li>FEATURES REMAINING TO IMPLEMENT</li>
+    - Adding a 24/7 Online chat service via chat<br>
+    - I set the on_sale var in product model but I could not manage to implement its logic due to time constraint.
+    - The blog app that is part of my code was replaced by the ejournal app. I did not wish to remove it at the last minute to avoid any unintended drawback at the last minute.<br>
+    - Two issues were notice with the ejournal app. The first being the Add Article set as link under Our News menu which makes its page accessible though it requires login credentianls to add an article. The second, once logged in to add article, the link Author displays the names of other registered used. I count to change this and restrict the page to the specific logged in user.<br>
+    - A css issue profile page on footer was identified, this stemmed from the application of crisp form and it needs some styling consideration. 
     - Connecting to additional payment systems such as PayPal<br>
-    - Adding a 24/7 service via chat<br>
     - Displaying number of product images per product<br>
     - Enlarging product image upon hovering<br>
     - Creating account with social media<br>
@@ -142,6 +147,9 @@ Users have options to purchase products as guest users or account holder users. 
 SQLite, which is Django built-in database is used for development mode and Heroku Postgre is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
 
 Below is the chart of the database to show the data relationships.<br><br>
+
+* [Homepage](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Homepage.jpg)
+* [Products](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Products.jpg)
 
 
 ## Surface Plane
@@ -162,11 +170,14 @@ Fontawesome icons were used for UX purposes to help the user's guidance to navig
 
 The design of this website layout relied mostly on the bootstrap library to ensure the convenience of both desktop  and mobile designs. The site is fully responsive with appropriate layout that match the images sizes to fit into the webpage layout. Thus, shoppers using a mobile phone have no difficulties looking for products and purchase them and be able navigate around the site. Below are the wireframes of the core pages of the website.
 
-* [HTML](https://www.w3schools.com/html/)
-* [CSS](https://www.w3schools.com/css/)
-* [JavaScript](https://www.w3schools.com/js/)
-* [Python](https://www.python.org/)
-    - [Django](https://www.djangoproject.com/)
+* [Homepage](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Homepage.jpg)
+* [Products](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Products.jpg)
+* [Product Details](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Product_detail.jpg)
+* [Shopping Cart](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Shopping%20Cart.jpg)
+* [Checkout](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Checkout.jpg)
+* [Tablet view - Product detail](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/Tablet%20View.jpg)
+* [Mobile View](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/MobileDevice%20View.jpg)
+
 
 
 # TECHNOLOGIES USED
@@ -189,8 +200,6 @@ The design of this website layout relied mostly on the bootstrap library to ensu
     - For version control, Git was used mainly to commit with help of Gitpod terminal and Push to GitHub.
 * [GitHub](https://github.com/):
     - GitHub is used for storing the code pushed from Git.
-* [Balsamiq](https://balsamiq.com/):
-    - Balsamiq was used to create the website home page
 * [Gitpod](https://gitpod.io/):
     - Gitpod was used as a workspace in production mode of the project
 * [Befunky](https://www.befunky.com/create/resize-image/):
@@ -207,6 +216,10 @@ The design of this website layout relied mostly on the bootstrap library to ensu
     - for icons
 * [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php):
     - for mockup
+
+# FEATURE TESTING
+
+* [Weebhook success](https://github.com/kafamem/msfour_kafagymstore/blob/main/media/stripe_webhook_success.jpg)
 
 # TESTING USER STORIES FROM USER EXPERIENCE (UX)
 
@@ -227,6 +240,8 @@ The design of this website layout relied mostly on the bootstrap library to ensu
         - User can clear see the product image and its related information to be able to decide.
     <li>To view product details, know the price, see the image, size if any, description etc.</li>
         - The website has a clear purchase navigation with pop-up messages, which allow user to pass the purchase to checkout.
+    <li>Two product were intentionally put out of stock to account for the non-availbility of the product.</li>
+        - User is informed about this via out of stock button.
     <li>To know about new offers(e.g. free delivery cost upon purchasing products of not less that 500 SEK etc).</li>
         - User is informed of new offers at the store through navigation link or delivery banner.
     <li>To view product details in my cart and confirm everything before purchase.</li>
